@@ -1,33 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+body{
+    float: left;
+    font-family: 'Roboto';
+    width: 1440px;
+}
+
 header{
     background-color: #373867;
     left: 1200;
     width: 1440px;
     height: 77px;
     float: left;
+    position: fixed;
 }
 
 h1{
-    font-style: bold;
+    font-weight: bold;
     font-size: 40px;
     padding: 0%;
     margin-top: 21.39px;
-    margin-left: 147.71px;
-    font-family: 'roboto';
+    margin-left: 26.92px;
     float: left;
+    color: #fff;
 }
 
 #rrlogo{
     width: 77.79px;
-    height: 55px;
+    height: 59px;
     float: left;
+    margin-left: 43px;
+    margin-top: 13px;
 }
 
 aside{
     position: fixed;
-    width: 22%;
+    width: 184px;
+    height: 100%;
+    margin-top: 77px;
+    background-color: #aace9b;
+}
+
+aside > *{
+    margin: 22px 0px 0px 13px;
+}
+
+aside > h2{
+    font-size: 14px;
+    font-weight: bold;
+    height: 19px;
+    width: 33.64px;
+    border-bottom: 3px solid #373867;
+}
+
+aside > ul{
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 400;
+    width: 120px;
+    line-height: 26px;
+    border-bottom: 1px solid rgba(55, 56, 103, 0.4);
+    list-style: none;
 }
 
 main{
-    position: relative;
-    left: 400;
+    float: left;
+    margin-left: 252px;
+    margin-top: 134px;
 }
+
+section{
+    width: 1110;
+    height: auto;
+    font-family: 'Roboto';
+    margin-bottom: 57px;
+}
+
+footer{
+    float: left;
+    margin-left: 252px;
+}
+
+.first-section-text > h2{
+    font-size: 40px;
+    width: 516.53px;
+    height: 94px;
+    font-weight: bold;
+}
+
+.first-section-text > button{
+    font-family: inherit;
+    width: 77px;
+    height: 18px;
+}
+
+
+.info-block{
+    width: 50%;
+    height: 50%;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.li-of-sidebar{
+    font-family: 'Roboto';
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 13px;
+    border-bottom: 1px solid rgba(55, 56, 103, 0.4);
+    width: 120px;
+    margin: 10px;
+}
+
+#first-section{
+    height: 489px;
+}
+
+#first-section > div{
+    float: left;
+}
+
+#first-section > img{
+    width: 520.2px;
+    height: 387px;
+    float: right;
+}
+
+/*.text-of-infoblock{
+    float: right;
+    margin: 55px;
+}*/
