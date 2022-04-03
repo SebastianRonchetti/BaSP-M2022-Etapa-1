@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
 
+
+/*COMPONENTS*/
+
 body{
     float: left;
     font-family: 'Roboto';
@@ -44,9 +47,10 @@ aside{
 
 aside > *{
     margin: 22px 0px 0px 13px;
+    color: #373867;
 }
 
-aside > h2{
+aside > p{
     font-size: 14px;
     font-weight: bold;
     height: 19px;
@@ -64,6 +68,11 @@ aside > ul{
     list-style: none;
 }
 
+aside li{
+    color: #373867;
+    font-size: 12px;
+}
+
 main{
     float: left;
     margin-left: 252px;
@@ -74,7 +83,23 @@ section{
     width: 1110;
     height: auto;
     font-family: 'Roboto';
-    margin-bottom: 57px;
+    margin: 0px 0px 57px 42.14px;
+    border-color: #afafc2;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+}
+
+section > h2{
+    font-family: 'Roboto';
+    width: fit-content;
+    font-style: bold;
+    font-size: 30px;
+    color: #373867;
+    padding: 0px 0px 15px 0px;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: #aace9b;
+    margin: 0px 0px 50px 0px;
 }
 
 footer{
@@ -82,26 +107,21 @@ footer{
     margin-left: 252px;
 }
 
-.first-section-text > h2{
-    font-size: 40px;
-    width: 516.53px;
-    height: 94px;
-    font-weight: bold;
+/*CLASSES*/
+
+.sidebar-icons{
+    margin-bottom: 35px;
 }
 
-.first-section-text > button{
-    font-family: inherit;
-    width: 77px;
-    height: 18px;
+.sidebar-icons > img{
+    width: 18.78px;
+    height: 15.09px;
 }
-
-
-.info-block{
-    width: 50%;
-    height: 50%;
-    border-color: red;
-    border-style: solid;
-    border-width: 1px;
+.sidebar-icons > a{
+    font-family: 'Roboto';
+    font-size: 12px;
+    height: 56px;
+    border: 0.01px;
 }
 
 .li-of-sidebar{
@@ -114,12 +134,82 @@ footer{
     margin: 10px;
 }
 
+.info-blocks > article{
+    display: inline-block;
+    width: 35%;
+    height: 213px;
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.img-of-infoblock{
+    width: 68.8px;
+    height: 75px;
+}
+
+.text-of-infoblock{
+    float: right;
+    margin: 31px 0px 15px 0px;
+    margin-left: 23.01px;
+    color: #373867;
+}
+
+.text-of-infoblock > h3{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.work-improvement-articles{
+    font-family: 'Roboto';
+    color: #373867;
+}
+
+.work-improvement-articles > article{
+    display: inline-block;
+    height: 581px;
+    width: 309.6;
+    padding: 20px;
+    background-color: rgba( 55, 56, 103, .10);
+    margin: 0px 79.93px 50px 0px;
+}
+
+.work-improvement-articles img{
+    width: 400px;
+    height: 264px;
+}
+
+.work-improvement-articles h3{
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+}
+
+.work-improvement-textbox{
+    font-size: 20px;
+    height: 184px;
+    width: 400px;
+    padding: 20px 0px 20px 0px;
+}
+
+.work-improvement-articles button{
+    width: 75px;
+    height: 38px;
+    border-radius: 5;
+}
+
+/*IDS*/
 #first-section{
     height: 489px;
+    color: #373867;
 }
 
 #first-section > div{
-    float: left;
+    padding: 0px 0px 0px 0px;
+    width: 516.53px;
+    height: 90px;
+    font-family: 'Roboto';
+    font-size: 15px;
 }
 
 #first-section > img{
@@ -128,7 +218,39 @@ footer{
     float: right;
 }
 
-/*.text-of-infoblock{
+#first-section > h2{
+    padding: 0px;
+    border-width: 0px;
+    color: #373867;
+    width: 516.53px;
+    height: 94px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0px 0px 19.16px 0px;
+}
+
+#first-section > span{
+    float: left;
+    padding: 0px 0px 0px 0px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin-bottom: 42.14px;
+    height: 46px;
+    width: 516.53px;
+}
+
+#first-section button{
     float: right;
-    margin: 55px;
-}*/
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    color: #373867;
+    width: 149px;
+    height: 46px;
+    border-color: #373867;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: 18.7px;
+}
+
