@@ -60,6 +60,10 @@ aside > p{
     border-bottom: 3px solid #373867;
 }
 
+aside > nav > article > p{
+    margin: 13px 0px 19px 0px;
+}
+
 aside > ul{
     font-size: 12px;
     font-weight: 400;
@@ -153,20 +157,31 @@ footer img{
     height: 38.1px;
 }
 
+footer section p{
+    text-align: right;
+}
+
 /*CLASSES*/
 
 .sidebar-icons{
     margin-bottom: 35px;
+    width: 171px;
 }
 
 .sidebar-icons > img{
     width: 18.78px;
     height: 15.09px;
+    display: inline;
 }
 .sidebar-icons > a{
     font-size: 12px;
     height: 56px;
     border: 0.01px;
+}
+
+.adress-nav p{
+    width: 134px;
+    text-align: right;
 }
 
 .li-of-sidebar{
