@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
-
+@import url(./reset.css);
 
 /*COMPONENTS*/
 
@@ -59,7 +59,6 @@ aside > p{
 }
 
 aside > ul{
-    font-family: 'Roboto';
     font-size: 12px;
     font-weight: 400;
     width: 120px;
@@ -82,7 +81,6 @@ main{
 section{
     width: 1110;
     height: auto;
-    font-family: 'Roboto';
     margin: 0px 0px 57px 42.14px;
     border-color: #afafc2;
     border-style: solid;
@@ -90,9 +88,8 @@ section{
 }
 
 section > h2{
-    font-family: 'Roboto';
     width: fit-content;
-    font-style: bold;
+    font-weight: bold;
     font-size: 30px;
     color: #373867;
     padding: 0px 0px 15px 0px;
@@ -100,6 +97,20 @@ section > h2{
     border-width: 0px 0px 3px 0px;
     border-color: #aace9b;
     margin: 0px 0px 50px 0px;
+}
+
+form{
+    color: #373867;
+}
+
+form > div{
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+
+form+div {
+    float: right;
 }
 
 footer{
@@ -118,14 +129,12 @@ footer{
     height: 15.09px;
 }
 .sidebar-icons > a{
-    font-family: 'Roboto';
     font-size: 12px;
     height: 56px;
     border: 0.01px;
 }
 
 .li-of-sidebar{
-    font-family: 'Roboto';
     font-size: inherit;
     font-weight: inherit;
     padding: 13px;
@@ -134,34 +143,40 @@ footer{
     margin: 10px;
 }
 
-.info-blocks > article{
+.info-block-section > div{
     display: inline-block;
-    width: 35%;
+    width: 1108px;
     height: 213px;
-    border-color: red;
-    border-style: solid;
-    border-width: 1px;
+    margin: 0px 64px 79px 0px;
+}
+
+.info-block{
+    float: left;
+    width: 50%;
 }
 
 .img-of-infoblock{
-    width: 68.8px;
-    height: 75px;
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    margin: 7.07px 23px 0px 0px;
 }
 
 .text-of-infoblock{
-    float: right;
+    width: 310px;
+    display: inline-block;
     margin: 31px 0px 15px 0px;
-    margin-left: 23.01px;
     color: #373867;
 }
 
 .text-of-infoblock > h3{
     font-weight: bold;
     font-size: 30px;
+    margin: 0px 0px 17px 0px;
 }
 
 .work-improvement-articles{
-    font-family: 'Roboto';
     color: #373867;
 }
 
@@ -198,6 +213,78 @@ footer{
     border-radius: 5;
 }
 
+.form-element{
+    height: 72.12px;
+}
+
+.form-element > input{
+    width: 527.04px;
+    height: 37px;
+    border-radius: 4px;
+    margin: 7px 0px 0px 0px;
+}
+
+.form-element > select{
+    width: 527.04px;
+    height: 37px;
+    border-radius: 4px;
+    margin: 7px 0px 0px 0px;
+}
+
+.form-element ol {
+    width: 459px;
+    height: 25.93px;
+    margin: 9.21px 0px 0px 0px;
+}
+
+.form-element ol li{
+    display: inline;
+    margin: 0px 88px 0px 0px;
+}
+
+.form-element-big{
+    float: none;
+    display: block;
+}
+
+.form-element-big > textarea{
+    width: 1109.08px;
+    height: 116.59px;
+    margin: 7px 0px 0px 0px;
+}
+
+.form-end-element{
+    float: none;
+    margin: 0px 0px 40px 0px;
+}
+
+.form-end-element [type="checkbox"]{
+    margin: 39.56px 0px 0px 0px;
+}
+
+.form-end-element label{
+    margin: 0px 59.4px 0px 0px;
+}
+
+.form-end-element button{
+    width: 112.74px;
+    height: 47px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #373867;
+    margin: 0px 41.25px 0px 0px;
+}
+
+.form-end-element > [value="submit"]{
+    background-color: #aace9b;
+}
+
+.form-end-element > [value="reset"]{
+    border-width: 3px;
+    border-color: #373867;
+}
+
 /*IDS*/
 #first-section{
     height: 489px;
@@ -208,7 +295,6 @@ footer{
     padding: 0px 0px 0px 0px;
     width: 516.53px;
     height: 90px;
-    font-family: 'Roboto';
     font-size: 15px;
 }
 
@@ -224,7 +310,6 @@ footer{
     color: #373867;
     width: 516.53px;
     height: 94px;
-    font-family: 'Roboto';
     font-weight: bold;
     font-size: 40px;
     margin: 0px 0px 19.16px 0px;
@@ -233,7 +318,6 @@ footer{
 #first-section > span{
     float: left;
     padding: 0px 0px 0px 0px;
-    font-family: 'Roboto';
     font-size: 20px;
     margin-bottom: 42.14px;
     height: 46px;
@@ -242,7 +326,6 @@ footer{
 
 #first-section button{
     float: right;
-    font-family: 'Roboto';
     font-weight: bold;
     font-size: 15px;
     color: #373867;
@@ -254,3 +337,11 @@ footer{
     margin-top: 18.7px;
 }
 
+#get-in-touch{
+    height: 642px;
+}
+
+#get-in-touch label{
+    font-size: 14px;
+    font-weight: 700;
+}

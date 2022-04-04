@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type= "text/css" href="/semana-03/css/reset.css">
         <title>basp-etapa-1-trackgenix-landing</title>
         <link rel="stylesheet" type= "text/css" href="/semana-03/css/styles.css">
     </head>
@@ -80,52 +79,56 @@
                     <button>Learn More</button>
                 </div>
             </section>
-            <section class="info-blocks">
+            <section class="info-block-section">
                 <h2>Functionalities </h2>
-                <article>
-                    <img class="img-of-infoblock" src="assets/icons/calendar-logo.png" alt="">
-                    <div class="text-of-infoblock">
-                        <h3>Time Tracking</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur</p>
-                        <p>adipisicing elit. Ex ipsam cum hic atque</p>
-                        <p>error eligendi laborum maxime distinctio</p>
-                        <p>nesciunt? Architecto ea blanditiis inventore</p>
-                        <p>natus velit dolore, fuga aliquam vero ipsum!</p>
-                    </div>
-                </article>
-                <article>
-                    <img class="img-of-infoblock" src="assets/icons/bar-graph-logo.png" alt="">
-                    <div class="text-of-infoblock">
-                        <h3>Reports</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur</p>
-                        <p>adipisicing elit. Ex ipsam cum hic atque</p>
-                        <p>error eligendi laborum maxime distinctio</p>
-                        <p>nesciunt? Architecto ea blanditiis inventore</p>
-                        <p>natus velit dolore, fuga aliquam vero ipsum!</p>
-                    </div>
-                </article>
-                <article>
-                    <img class="img-of-infoblock" src="assets/icons/multiple-empty.PNG" alt="">
-                    <div class="text-of-infoblock">
-                        <h3>Multiple Roles</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur</p>
-                        <p>adipisicing elit. Ex ipsam cum hic atque</p>
-                        <p>error eligendi laborum maxime distinctio</p>
-                        <p>nesciunt? Architecto ea blanditiis inventore</p>
-                        <p>natus velit dolore, fuga aliquam vero ipsum!</p>
-                    </div>
-                </article>
-                <article>
-                    <img class="img-of-infoblock" src="assets/icons/multiple-empty.PNG" alt="">
-                    <div class="text-of-infoblock">
-                        <h3>Resource management</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur</p>
-                        <p>adipisicing elit. Ex ipsam cum hic atque</p>
-                        <p>error eligendi laborum maxime distinctio</p>
-                        <p>nesciunt? Architecto ea blanditiis inventore</p>
-                        <p>natus velit dolore, fuga aliquam vero ipsum!</p>
-                    </div>
-                </article>
+                <div>
+                    <article class="info-block">
+                        <img class="img-of-infoblock" src="assets/icons/calendar-logo.png" alt="">
+                        <div class="text-of-infoblock">
+                            <h3>Time Tracking</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur</p>
+                            <p>adipisicing elit. Ex ipsam cum hic atque</p>
+                            <p>error eligendi laborum maxime distinctio</p>
+                            <p>nesciunt? Architecto ea blanditiis inventore</p>
+                            <p>natus velit dolore, fuga aliquam vero ipsum!</p>
+                        </div>
+                    </article>
+                    <article class="info-block">
+                        <img class="img-of-infoblock" src="assets/icons/bar-graph-logo.png" alt="">
+                        <div class="text-of-infoblock">
+                            <h3>Reports</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur</p>
+                            <p>adipisicing elit. Ex ipsam cum hic atque</p>
+                            <p>error eligendi laborum maxime distinctio</p>
+                            <p>nesciunt? Architecto ea blanditiis inventore</p>
+                            <p>natus velit dolore, fuga aliquam vero ipsum!</p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="info-block">
+                        <img class="img-of-infoblock" src="assets/icons/multiple-roles.png" alt="">
+                        <div class="text-of-infoblock">
+                            <h3>Multiple Roles</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur</p>
+                            <p>adipisicing elit. Ex ipsam cum hic atque</p>
+                            <p>error eligendi laborum maxime distinctio</p>
+                            <p>nesciunt? Architecto ea blanditiis inventore</p>
+                            <p>natus velit dolore, fuga aliquam vero ipsum!</p>
+                        </div>
+                    </article>
+                    <article class="info-block">
+                        <img class="img-of-infoblock" src="assets/icons/resource-management.png" alt="">
+                        <div class="text-of-infoblock">
+                            <h3>Resource management</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur</p>
+                            <p>adipisicing elit. Ex ipsam cum hic atque</p>
+                            <p>error eligendi laborum maxime distinctio</p>
+                            <p>nesciunt? Architecto ea blanditiis inventore</p>
+                            <p>natus velit dolore, fuga aliquam vero ipsum!</p>
+                        </div>
+                    </article>
+                </div>
             </section>
             <section>
                 <h2> Why does this mean an improvement in your work? </h2>
@@ -191,55 +194,61 @@
                     </article>
                 </div>
             </section>
-            <section>
+            <section id="get-in-touch">
                 <h2>Get in touch with us!</h2>
                 <form action ="">
                     <div>
-                        <label for="fname">Full Name</label>
-                        <input id="fName" type="text" name="fName">
+                        <div class="form-element">
+                            <label for="fname">Full Name</label>
+                            <input id="fName" type="text" name="fName">
+                        </div>
+                        <div class="form-element">
+                            <label for="deptSelection">Choose a Department</label>
+                            <select id="deptSelection" name="deptSelection" name="deptSelection">
+                                <option value="humanresources">Human resouces</option>
+                                <option value="itDepartment">IT Department</option>
+                                <option value="publicRelations">Public Relations</option>
+                            </select>
+                        </div>
                     </div>
                     <div>
-                        <label for="deptSelection">Select a Department</label>
-                        <select id="deptSelection" name="deptSelection" name="deptSelection">
-                            <option value="humanresources">Human resouces</option>
-                            <option value="itDepartment">IT Department</option>
-                            <option value="publicRelations">Public Relations</option>
-                        </select>
+                        <div class="form-element">
+                            <label for="eMail">E-Mail Adress</label>
+                            <input id="eMail" type="text" name="eMail" >
+                        </div>
+                        <div class="form-element">
+                            <label for="priority">Priority</label>
+                            <ol id="priority">
+                                <li>
+                                    <input id="low" type="radio" name="low">
+                                    <label for="low">Low</label>
+                                </li>
+                                <li>
+                                    <input id="medium" type="radio" name="medium">
+                                    <label for="medium">Medium</label>
+                                </li>
+                                <li>
+                                    <input id="high" type="radio" name="high">
+                                    <label for="high">High</label>
+                                </li>
+                            </ol>
+                        </div>
                     </div>
-                    <div>
-                        <label for="eMail">E-Mail Adress</label>
-                        <input id="eMail" type="text" name="eMail" >
-                    </div>
-                    <div>
-                        <label for="priority">Priority</label>
-                        <ol id="priority">
-                            <li>
-                                <input id="low" type="checkbox" name="low">
-                                <label for="low">Low</label>
-                            </li>
-                            <li>
-                                <input id="medium" type="checkbox" name="medium">
-                                <label for="medium">Medium</label>
-                            </li>
-                            <li>
-                                <input id="high" type="checkbox" name="high">
-                                <label for="high">High</label>
-                            </li>
-                        </ol>
-                    </div>
-                    <div>
+                    <div class="form-element-big">
                         <label for="questions">Ask about our systems</label>
                         <textarea id="questions" name="questions" rows="5" cols="15"></textarea>
                     </div>
                     <div>
-                        <input id="notRobot" type="checkbox" name="noRobot">
-                        <label for="norobot">I'm not a robot</label>
-                        <input id="sendCopy" type="checkbox" name="sendCopy">
-                        <label for="sendCopy">Send me a copy</label>
-                    </div>
-                    <div>
-                        <input type="submit" value="submit">
-                        <button>reset</button>
+                        <div class="form-end-element">
+                            <input id="notRobot" type="checkbox" name="noRobot">
+                            <label for="norobot">I'm not a robot</label>
+                            <input id="sendCopy" type="checkbox" name="sendCopy">
+                            <label for="sendCopy">Send me a copy</label>
+                        </div>
+                        <div class="form-end-element">
+                            <button value="submit">Submit</button>
+                            <button value="reset">Reset</button>
+                        </div>
                     </div>
                 </form>
             </section>
