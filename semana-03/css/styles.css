@@ -13,7 +13,7 @@ body{
 header{
     background-color: #373867;
     left: 1200;
-    width: 1440px;
+    width: 100%;
     height: 77px;
     float: left;
     position: fixed;
@@ -48,16 +48,18 @@ aside{
 }
 
 aside > *{
-    margin: 22px 0px 0px 13px;
+    margin: 22px 0px 0px 19px;
     color: #373867;
 }
 
 aside > p{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     height: 19px;
     width: 33.64px;
-    border-bottom: 3px solid #373867;
+    border-bottom: 4px solid #373867;
+    margin: 22px 0px 0px 19px;
+    padding-right: 20px;
 }
 
 aside > nav > article > p{
@@ -98,7 +100,7 @@ section > h2{
     font-weight: bold;
     font-size: 30px;
     color: #373867;
-    padding: 0px 0px 15px 0px;
+    padding: 0px 30px 15px 0px;
     border-style: solid;
     border-width: 0px 0px 3px 0px;
     border-color: #aace9b;
@@ -122,15 +124,20 @@ form+div {
 section > nav{
     height: 115px;
     width: 883.15px;
+    padding: 0px 0px 50px 0px;
 }
 
 section > nav > div{
     display: inline-block;
-    margin: 0px 95px 0px 95px;
+    margin: 0px 93px 0px 95px;
     font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 15px;
     color: #373867;
+}
+section > nav > div > ol{
+    margin: 0px 0px 0px 3px;
 }
 
 footer{
@@ -145,10 +152,7 @@ footer > *{
     height: 100px;
     border-style: none;
     border-width: 0px 0px 0px 0px;
-}
-
-footer :nth-child(2){
-    float: right;
+    color: #373867;
 }
 
 footer img{
@@ -159,12 +163,13 @@ footer img{
 
 footer section p{
     text-align: right;
+    font-size: 20px;
 }
 
 /*CLASSES*/
 
 .sidebar-icons{
-    margin-bottom: 35px;
+    margin: 10px 1px 35px 0px;
     width: 171px;
 }
 
@@ -182,15 +187,16 @@ footer section p{
 .adress-nav p{
     width: 134px;
     text-align: right;
+    display: block;
 }
 
 .li-of-sidebar{
     font-size: inherit;
     font-weight: inherit;
-    padding: 13px;
+    padding: 13px 0px 13px 0px;
     border-bottom: 1px solid rgba(55, 56, 103, 0.4);
     width: 120px;
-    margin: 10px;
+    margin: 10px 0px 10px 0px;
 }
 
 .info-block-section > div{
@@ -333,10 +339,11 @@ footer section p{
 
 .form-end-element > [value="submit"]{
     background-color: #aace9b;
+    border-width: 0px;
 }
 
 .form-end-element > [value="reset"]{
-    border-width: 3px;
+    border-width: 1px;
     border-color: #373867;
 }
 
