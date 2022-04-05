@@ -234,10 +234,16 @@ footer section p{
 
 .work-improvement-articles{
     color: #373867;
+    height: 1487;
 }
 
-.work-improvement-articles > article{
+.work-improvement-articles > div{
+    height: fit-content;
+}
+
+.work-improvement-articles > div > article{
     display: inline-block;
+    vertical-align: top;
     height: 581px;
     width: 309.6;
     padding: 20px;
@@ -283,6 +289,8 @@ footer section p{
     height: 37px;
     border-radius: 4px;
     margin: 7px 0px 0px 0px;
+    border-color: #373867;
+    border-width: 2px;
 }
 
 .form-element > select{
@@ -312,6 +320,9 @@ footer section p{
     width: 1109.08px;
     height: 116.59px;
     margin: 7px 0px 0px 0px;
+    border-radius: 5px;
+    border-color: #373867;
+    border-width: 2px;
 }
 
 .form-end-element{
@@ -406,6 +417,10 @@ footer section p{
     border-radius: 5px;
     border-width: 1px;
     margin-top: 18.7px;
+}
+
+#problem-textbox{
+    padding: 10px 0px 0px 0px;
 }
 
 #get-in-touch{
