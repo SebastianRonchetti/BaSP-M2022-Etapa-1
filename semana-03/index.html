@@ -43,8 +43,11 @@
                             <img src="./assets/icons/home-icon.PNG">
                             <a href="#">
                                 Somewhere Road
+                                <p></p>
                                 #8254
+                                <p></p>
                                 Nashville, TN
+                                <p></p>
                                 00000-0000
                             </a>
                         </li>
@@ -216,21 +219,23 @@
                     <div>
                         <div class="form-element">
                             <label for="fname">Full Name</label>
-                            <input id="fName" type="text" name="fName">
+                            <input id="fName" type="text" name="fName" placeholder="  Your name">
                         </div>
                         <div class="form-element">
                             <label for="deptSelection">Choose a Department</label>
-                            <select id="deptSelection" name="deptSelection" name="deptSelection">
-                                <option value="humanresources">Human resouces</option>
-                                <option value="itDepartment">IT Department</option>
-                                <option value="publicRelations">Public Relations</option>
+                            <select id="deptSelection" name="deptSelection" name="deptSelection" 
+                            aria-placeholder="Department">
+                                <option value="Area" disabled selected hidden> -Area-</option>
+                                <option value="humanresources"> Human resouces</option>
+                                <option value="itDepartment"> IT Department</option>
+                                <option value="publicRelations"> Public Relations</option>
                             </select>
                         </div>
                     </div>
                     <div>
                         <div class="form-element">
-                            <label for="eMail">EMail Adress</label>
-                            <input id="eMail" type="text" name="eMail" >
+                            <label for="eMail">Email Adress</label>
+                            <input id="eMail" type="text" name="eMail" placeholder="  email@trackgenix.com">
                         </div>
                         <div class="form-element">
                             <label for="priority">Priority</label>
@@ -252,7 +257,8 @@
                     </div>
                     <div class="form-element-big">
                         <label for="questions">Ask about our systems</label>
-                        <textarea id="questions" name="questions" rows="5" cols="15"></textarea>
+                        <textarea id="questions" name="questions" rows="5" cols="15" 
+                        placeholder="Enter your message"></textarea>
                     </div>
                     <div>
                         <div class="form-end-element">
@@ -333,12 +339,12 @@
                 <img src="./assets/icons/instagram-logo.png" alt="">
                 <img src="./assets/icons/github-logo.png" alt="">
             </section>
-            <section>
+            <div>
                 <p>Rosario, Argentina</p>
                 <pre>
                 </pre>
                 <p>Copyright 2022 Radium Rocket All rights reserved</p>
-            </section>
+            </div>
         </footer>
     </body>
 </html>
