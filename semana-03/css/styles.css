@@ -188,6 +188,10 @@ footer > section :nth-child(5){
     height: 38.1px;
 }
 
+footer div{
+    margin-left: 230px;
+}
+
 footer div p{
     text-align: right;
     font-size: 20px;

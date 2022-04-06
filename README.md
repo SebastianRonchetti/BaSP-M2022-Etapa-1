@@ -11,4 +11,8 @@ To enter the project index, download the entire project from the github repo. Bo
 Created index.html
 ```
 
+### Week 03
+```
+Created styles.css and implemented various styles onto the html.
+```
 _By Sebastián Ronchetti_
