@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import url(./reset.css);
+
+/*COMPONENTS*/
+
+body{
+    float: left;
+    font-family: 'Roboto';
+    width: 1440px;
+}
+
+header{
+    background-color: #373867;
+    left: 1200;
+    width: 100%;
+    height: 77px;
+    float: left;
+    position: fixed;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0%;
+    margin-top: 21.39px;
+    margin-left: 26.92px;
+    float: left;
+    color: #fff;
+}
+
+a:link{
+    color: #373867;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #373867;
+    text-decoration: none;
+}
+
+aside{
+    position: fixed;
+    width: 184px;
+    height: 100%;
+    margin-top: 77px;
+    background-color: #aace9b;
+}
+
+aside > *{
+    margin: 22px 0px 0px 19px;
+    color: #373867;
+}
+
+aside > p{
+    font-size: 16px;
+    font-weight: bold;
+    height: 19px;
+    width: 33.64px;
+    border-bottom: 4px solid #373867;
+    margin: 22px 0px 0px 19px;
+    padding-right: 20px;
+}
+
+aside > nav > article > p{
+    margin: 13px 0px 19px 0px;
+}
+
+aside > ul{
+    font-size: 12px;
+    font-weight: 400;
+    width: 120px;
+    line-height: 26px;
+    border-bottom: 1px solid rgba(55, 56, 103, 0.4);
+    list-style: none;
+}
+
+aside li{
+    color: #373867;
+    font-size: 12px;
+}
+
+main{
+    float: left;
+    margin-left: 252px;
+    margin-top: 134px;
+}
+
+section{
+    width: 1110;
+    height: auto;
+    margin: 0px 0px 57px 42.14px;
+    border-color: #afafc2;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+}
+
+section > h2{
+    width: fit-content;
+    font-weight: bold;
+    font-size: 30px;
+    color: #373867;
+    padding: 0px 30px 15px 0px;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: #aace9b;
+    margin: 0px 0px 50px 0px;
+}
+
+form{
+    color: #373867;
+}
+
+form > div{
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+
+form+div {
+    float: right;
+}
+
+section > nav{
+    height: 115px;
+    width: 883.15px;
+    padding: 0px 0px 50px 0px;
+}
+
+section > nav > div{
+    display: inline-block;
+    margin: 0px 93px 0px 95px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 15px;
+    color: #373867;
+}
+section > nav > div > ol{
+    margin: 0px 0px 0px 3px;
+}
+
+footer{
+    width: 1110;
+    height: auto;
+    margin: 0px 0px 57px 42.14px;
+}
+
+footer > *{
+    float: left;
+    margin-left: 252px;
+    height: 100px;
+    border-style: none;
+    border-width: 0px 0px 0px 0px;
+    color: #373867;
+}
+
+footer img{
+    display: inline;
+}
+
+footer > section :nth-child(1){
+    width: 40px;
+    height: 40px;
+    margin: 0px 36px 0px 0px;
+}
+
+footer > section :nth-child(2){
+    width: 46.1px;
+    height: 38.1px;
+    margin: 0px 39.81px 0px 0px;
+}
+
+footer > section :nth-child(3){
+    width: 30.71px;
+    height: 39.1px;
+    margin: 0px 40.38px 0px 0px;
+}
+
+footer > section :nth-child(4){
+    width: 38.3px;
+    height: 38.1px;
+    margin: 0px 40.82px 0px 0px;
+}
+
+footer > section :nth-child(5){
+    width: 35.41px;
+    height: 38.1px;
+}
+
+footer div{
+    margin-left: 230px;
+}
+
+footer div p{
+    text-align: right;
+    font-size: 20px;
+}
+
+/*CLASSES*/
+
+.sidebar-icons{
+    margin: 10px 1px 35px 0px;
+    width: 171px;
+}
+
+.sidebar-icons > img{
+    width: 18.78px;
+    height: 15.09px;
+    display: inline;
+}
+.sidebar-icons > a{
+    font-size: 12px;
+    height: 56px;
+    border: 0.01px;
+}
+
+.adress-nav *{
+    display: block;
+}
+
+.adress-nav img{
+    float:  left;
+}
+.adress-nav a{
+    width: 134px;
+    text-align: left;
+    display: block;
+    padding: 0px 0px 0px 17px;
+}
+
+.li-of-sidebar{
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 13px 0px 13px 0px;
+    border-bottom: 1px solid rgba(55, 56, 103, 0.4);
+    width: 120px;
+    margin: 10px 0px 10px 0px;
+}
+
+.info-block-section > div{
+    display: inline-block;
+    width: 1108px;
+    height: 213px;
+    margin: 0px 64px 79px 0px;
+}
+
+.info-block{
+    float: left;
+    width: 50%;
+}
+
+.img-of-infoblock{
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    margin: 7.07px 23px 0px 0px;
+}
+
+.text-of-infoblock{
+    width: 310px;
+    display: inline-block;
+    margin: 31px 0px 15px 0px;
+    color: #373867;
+}
+
+.text-of-infoblock > h3{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px 0px 17px 0px;
+}
+
+.work-improvement-articles{
+    color: #373867;
+    height: 1487;
+}
+
+.work-improvement-articles > div{
+    height: fit-content;
+}
+
+.work-improvement-articles > div > article{
+    display: inline-block;
+    vertical-align: top;
+    height: 581px;
+    width: 309.6;
+    padding: 20px;
+    background-color: rgba( 55, 56, 103, .10);
+    margin: 0px 79.93px 50px 0px;
+}
+
+.work-improvement-articles img{
+    width: 400px;
+    height: 264px;
+}
+
+.work-improvement-articles h3{
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+}
+
+.work-improvement-textbox{
+    font-size: 20px;
+    height: 184px;
+    width: 400px;
+    padding: 20px 0px 20px 0px;
+}
+
+.work-improvement-articles button{
+    width: 75px;
+    height: 38px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #373867;
+    color: #373867;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.form-element{
+    height: 72.12px;
+    color: #373867;
+}
+
+.form-element > input{
+    width: 527.04px;
+    height: 37px;
+    border-radius: 4px;
+    margin: 7px 0px 0px 0px;
+    border-color: #373867;
+    border-width: 2px;
+    color: #373867;
+}
+
+.form-element > select{
+    width: 535px;
+    height: 37px;
+    border-radius: 4px;
+    margin: 7px 0px 0px 0px;
+    border-color: #373867;
+    border-width: 2px;
+    color: rgba(55, 56, 103, 75%);
+}
+
+.form-element ol {
+    width: 459px;
+    height: 25.93px;
+    margin: 9.21px 0px 0px 0px;
+}
+
+.form-element ol li{
+    display: inline;
+    margin: 0px 88px 0px 0px;
+}
+
+.form-element-big{
+    float: none;
+    display: block;
+}
+
+.form-element-big > textarea{
+    width: 1109.08px;
+    height: 116.59px;
+    margin: 7px 0px 0px 0px;
+    border-radius: 5px;
+    border-color: #373867;
+    border-width: 2px;
+    font-family: 'Roboto';
+}
+
+.form-end-element{
+    float: none;
+    margin: 0px 0px 40px 0px;
+}
+
+.form-end-element [type="checkbox"]{
+    margin: 39.56px 0px 0px 0px;
+    
+}
+.form-end-element [type="checkbox"]:checked + label:after{
+    background-color: #34636e;
+}
+
+.form-end-element label{
+    margin: 0px 59.4px 0px 0px;
+}
+
+.form-end-element button{
+    width: 112.74px;
+    height: 47px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #373867;
+    margin: 0px 41.25px 0px 0px;
+}
+
+.form-end-element > [value="submit"]{
+    background-color: #aace9b;
+    border-width: 0px;
+}
+
+.form-end-element > [value="reset"]{
+    border-width: 1px;
+    border-color: #373867;
+}
+
+/*IDS*/
+
+#rrlogo{
+    width: 78px;
+    height: 59px;
+    float: left;
+    margin-left: 43px;
+    margin-top: 13px;
+}
+
+#first-section{
+    height: 489px;
+    color: #373867;
+}
+
+#first-section > div{
+    padding: 0px 0px 0px 0px;
+    width: 516.53px;
+    height: 90px;
+    font-size: 15px;
+}
+
+#first-section > img{
+    width: 520.2px;
+    height: 387px;
+    float: right;
+}
+
+#first-section > h2{
+    padding: 0px;
+    border-width: 0px;
+    color: #373867;
+    width: 516.53px;
+    height: 94px;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0px 0px 19.16px 0px;
+}
+
+#first-section > span{
+    float: left;
+    padding: 0px 0px 0px 0px;
+    font-size: 20px;
+    margin-bottom: 42.14px;
+    height: 46px;
+    width: 516.53px;
+}
+
+#first-section button{
+    float: right;
+    font-weight: bold;
+    font-size: 15px;
+    color: #373867;
+    width: 149px;
+    height: 46px;
+    border-color: #373867;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: 18.7px;
+}
+
+#problem-textbox{
+    padding: 10px 0px 0px 0px;
+}
+
+#get-in-touch{
+    height: 642px;
+}
+
+#get-in-touch label{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#our-story{
+    height: 448px;
+    color: #373867;
+}
+
+#our-story > div{
+    height: 126.5px;
+}
+
+#our-story > div > p {
+    font-weight: 400;
+    font-size: 20px;
+    display: inline-block;
+}
