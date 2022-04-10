@@ -1,0 +1,64 @@
+footer > section :nth-child(1){
+    width: 40px;
+    height: 40px;
+}
+
+footer > section :nth-child(2){
+    width: 46.1px;
+    height: 38.1px;
+}
+
+footer > section :nth-child(3){
+    width: 30.71px;
+    height: 39.1px;
+}
+
+footer > section :nth-child(4){
+    width: 38.3px;
+    height: 38.1px;
+}
+
+footer > section :nth-child(5){
+    width: 35.41px;
+    height: 38.1px;
+}
+
+footer section.flex-container{
+    border: none;
+}
+
+@media only screen and (max-width: 480px){
+    footer{
+        justify-content: space-around;
+        gap: 10px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    footer.flex-container section.flex-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0px;
+    }
+
+    footer div{
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px){
+    footer.flex-container{
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    footer.flex-container{
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+}

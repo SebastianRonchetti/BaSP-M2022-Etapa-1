@@ -10,6 +10,7 @@
 
 body{
     font-family: 'Roboto';
+    gap: 20px;
 }
 
 section{
@@ -21,4 +22,6 @@ section{
 
 .flex-container{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -8,7 +8,6 @@ header{
     width: 100%;
     height: 10%;
     position: fixed;
-    justify-content: space-between;
 }
 
 #rrlogo{
@@ -29,4 +28,9 @@ h1{
     color: #fff;
     align-self: center;
     font-size: 25px;
+}
+
+header.flex-container{
+    flex-direction: row;
+    justify-content: space-around;
 }
