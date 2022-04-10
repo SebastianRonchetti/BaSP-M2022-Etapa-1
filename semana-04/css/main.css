@@ -1,8 +1,3 @@
-main.flex-container{
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 60px 90px;
-}
 
 p, b, h2, h3, h4, a, span, pre, label, input, select, textarea{
     font-family: 'Roboto';
@@ -29,20 +24,12 @@ section.flex-container{
     align-items: center;
     height: 20%;
     border-style: solid;
-    border-width: 0px 0px 3px 0px;
     border-color: #aace9b;
-    padding: 0px 0px 40px 0px;
 }
 
 button{
-    width: 75px;
-    height: 38px;
-    border-radius: 5px;
-    border-width: 1px;
     border-color: #373867;
     color: #373867;
-    font-weight: 700;
-    font-size: 15px;
 }
 
 section > h2{
@@ -62,30 +49,12 @@ section > div > p{
     font-size: 14px;
 }
 
-form.flex-container{
-    width: 100%;
-    gap: 15px;
-}
-
 ol.flex-container > li{
     flex-direction: row;
     justify-content: space-around;
 }
 
 /* CLASSES */
-
-.info-block.flex-container{
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 309px;
-    width: 95%;
-}
-
-.img-of-infoblock{
-    height: 140px;
-    width: 140px;
-}
 
 .text-of-infoblock{
     text-align: center;
@@ -95,7 +64,6 @@ ol.flex-container > li{
     font-family: 'Roboto';
     font-weight: bold;
     color: #373867;
-    font-size: 20px;
 }
 
 .text-of-infoblock-section.flex-container{
@@ -112,34 +80,10 @@ ol.flex-container > li{
 
 .work-improv-art.flex-container{
     background-color: rgba( 55, 56, 103, .10);
-    justify-content: space-around;
-    padding: 20px;
-    gap: 15px ;
-}
-
-.work-improv-art.flex-container > img{
-    border-radius: 5%;
-    width: 100%;
-    height: 280px;
 }
 
 .work-improv-art.flex-container > h3{
     font-weight: bold;
-    font-size: 16px;
-}
-
-.work-improvement-textbox.flex-container{
-    align-items: center;
-    font-size: 14px;
-}
-
-.half-form.flex-container{
-    justify-content: space-around;
-    gap: 10px;
-}
-
-.form-element.flex-container{
-    gap: 2px;
 }
 
 .form-element.flex-container label{
@@ -151,35 +95,10 @@ ol.flex-container > li{
 .form-element.flex-container input, 
 .form-element-big.flex-container textarea{
     border-color: #373867;
-    border-width: 1px;
-    border-radius: 5px;
-}
-
-.form-element.flex-container select{
-    width: 92%;
-    height: 30px;
-}
-
-.form-element.flex-container input{
-    width: 90%;
-    height: 30px;
-}
-
-.form-element-big.flex-container{
-    gap: 10px;
-    width: 100%;
 }
 
 .form-element-big.flex-container > label{
     font-weight: bold;
-}
-
-.form-element-big.flex-container > textarea{
-    width: 95%;
-}
-
-.form-end-div.flex-container{
-    gap: 20px;
 }
 
 .form-end-element.flex-container{
@@ -188,75 +107,184 @@ ol.flex-container > li{
     font-weight: bold;
 }
 
-.story-text.flex-container{
-    font-weight: 500;
-}
-
 .bottom-nav.flex-container{
     justify-content: space-between;
-    gap: 15px;
-}
-
-.bottom-nav-div.flex-container > b{
-    font-size: 15px;
-}
-
-.bottom-nav-div.flex-container > ol >li{
-    margin: 0px 0px 0px 10px;
 }
 
 .bottom-nav-div.flex-container > ol > li > a{
     text-decoration: none;
-    font-size: 14px;
 }
 
 /* ID's */
 
 #first-section > h2{
-    font-size: 30px;
     border: none;
 }
-
-#first-section > div{
-    margin: 13px 0px 0px 0px;
-}
-
 
 #first-section .flex-container{
     flex-direction: column;
 }
 
-#first-section img{
-    align-self: center;
-    width: 97%;
-}
-
-#first-section button{
-    width: 40%;
-}
-
-#work-improvement-articles-section{
-    justify-content: space-around;
-    gap: 20px 10px;
-}
-
-#priority.flex-container{
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#priority.flex-container > li.flex-container > input{
-    width: auto;
-    height: auto;
-}
-
-#bottom-nav.flex-container{
-    border-width: 0px 0px 8px 0px;
-    border-radius: 7px;
-}
-
 @media only screen and (max-width: 480px){
+    main.flex-container{
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 60px 90px;
+    }
 
+    button{
+        border-width: 0px 0px 3px 0px;
+        width: 75px;
+        height: 38px;
+        border-radius: 5px;
+        border-width: 1px;
+        padding: 0px 0px 40px 0px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    form.flex-container{
+        width: 100%;
+        gap: 15px;
+    }
+
+    /* CLASSES */
+    .info-block.flex-container{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 309px;
+        width: 95%;
+    }
+
+    .text-of-infoblock h3{
+        font-size: 20px;
+    }
+
+    .img-of-infoblock{
+        height: 140px;
+        width: 140px;
+    }
+
+    .work-improv-art.flex-container{ 
+        justify-content: space-around;
+        padding: 20px;
+        gap: 15px ;
+    }
+
+    .work-improv-art.flex-container > img{
+        border-radius: 5%;
+        width: 100%;
+        height: 280px;
+    }
+
+    .work-improv-art.flex-container > h3{
+        font-size: 16px;
+    }
+
+    .work-improvement-textbox.flex-container{
+        align-items: center;
+        font-size: 14px;
+    }
+        
+    .form-element.flex-container select, 
+    .form-element.flex-container input, 
+    .form-element-big.flex-container textarea{
+        border-width: 1px;
+        border-radius: 5px;
+    }
+    
+    .form-element.flex-container select{
+        width: 92%;
+        height: 30px;
+    }
+    
+    .form-element.flex-container input{
+        width: 90%;
+        height: 30px;
+    }
+    
+    .form-element-big.flex-container{
+        gap: 10px;
+        width: 100%;
+    }
+
+    .form-element-big.flex-container > textarea{
+        width: 95%;
+    }
+
+    .form-end-div.flex-container{
+        gap: 20px;
+    }
+
+    .half-form.flex-container{
+        justify-content: space-around;
+        gap: 10px;
+    }
+    
+    .form-element.flex-container{
+        gap: 2px;
+    }
+
+    .story-text.flex-container{
+        font-weight: 500;
+    }
+
+    .bottom-nav.flex-container{
+        gap: 10px;
+    }
+
+    .bottom-nav-div.flex-container > b{
+        font-size: 15px;
+    }
+    
+    .bottom-nav-div.flex-container > ol >li{
+        margin: 0px 0px 0px 10px;
+    }
+
+    .bottom-nav-div.flex-container > ol > li > a{
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    /* ID'S */
+
+    #first-section > h2{
+        font-size: 30px;
+    }
+
+    #first-section > div{
+        margin: 13px 0px 0px 0px;
+    }
+
+    #first-section img{
+        align-self: center;
+        width: 97%;
+    }
+    
+    #first-section button{
+        width: 40%;
+    }
+    
+    #work-improvement-articles-section{
+        justify-content: space-around;
+        gap: 20px 10px;
+    }
+
+    #priority.flex-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #priority.flex-container > li.flex-container > input{
+        width: auto;
+        height: auto;
+    }
+    
+    #bottom-nav.flex-container{
+        border-width: 0px 0px 8px 0px;
+        border-radius: 7px;
+    }
 }
 
 @media only screen and (max-width: 768px){
