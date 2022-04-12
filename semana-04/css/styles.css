@@ -26,3 +26,8 @@ section{
     flex-direction: column;
     justify-content: center;
 }
+
+p, b, h2, h3, h4, a, span, pre, label, input, select, textarea{
+    font-family: 'Roboto';
+    color: #373867;
+}

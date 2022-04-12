@@ -75,6 +75,7 @@ header.flex-container{
         height: 10%;
         align-items: center;
         flex-direction: row;
+        position: fixed;
     }
     
     header.flex-container h1{
