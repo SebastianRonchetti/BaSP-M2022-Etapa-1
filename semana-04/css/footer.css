@@ -109,10 +109,70 @@ footer section.flex-container{
     }
 }
 
-@media only screen and (min-width: 768px) and (max-with: 1080px){
+@media only screen and (min-width: 769px){
     footer.flex-container{
-        visibility: hidden;
-        height: 0px;
-        width: 0px;
+        justify-content: space-evenly;
+        margin: 10px 0px 0px 20%;
+        flex-direction: row;
+        width: 78%;
+    }
+
+    footer.flex-container section.flex-container{
+        flex-direction: row;
+        justify-content: start;
+        gap: 34px;
+        padding: 0px;
+        align-items: flex-start;
+        margin: 0px;
+        width: 38%;
+    }
+
+    footer div.flex-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 0px;
+        width: 50%;
+    }
+
+    footer div.flex-container :nth-child(1){
+        width: 95%;
+        text-align: end;
+    }
+    
+    footer div.flex-container :nth-child(2){
+        width: 65%;
+        text-align: end;
+    }
+    
+    footer div.flex-container :nth-child(3){
+        width: 35%;
+        
+    }
+
+    footer > section :nth-child(1){
+        /* width: 40px;
+        height: 40px; */
+        width: 30px;
+        height: 30px;
+    }
+    
+    footer > section :nth-child(2){
+        width: 36.1px;
+        height: 28.1px;
+    }
+    
+    footer > section :nth-child(3){
+        width: 20.71px;
+        height: 29.1px;
+    }
+    
+    footer > section :nth-child(4){
+        width: 28.3px;
+        height: 28.1px;
+    }
+    
+    footer > section :nth-child(5){
+        width: 25.41px;
+        height: 28.1px;
     }
 }

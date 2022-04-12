@@ -118,7 +118,7 @@ ol.flex-container > li{
 
 /* ID's */
 
-#first-section > h2{
+#first-section > div >h2{
     border: none;
 }
 
@@ -260,7 +260,7 @@ ol.flex-container > li{
 
     /* ID'S */
 
-    #first-section > h2{
+    #first-section > div >h2{
         font-size: 30px;
     }
 
@@ -269,12 +269,12 @@ ol.flex-container > li{
         width: 97%;
     }
 
-    #first-section > div.flex-container{
+    #first-section > div >div.flex-container{
         margin: 13px 0px 0px 0px;
         gap: 15px;
     }
 
-    #first-section > div.flex-container p{
+    #first-section > div >div.flex-container p{
         font-weight: 500;
     }
     
@@ -309,7 +309,7 @@ ol.flex-container > li{
 
 /* TABLET */
 
-@media only screen and (min-width:480px) and (max-width: 768px){
+@media only screen and (min-width:481px) and (max-width: 768px){
     main.flex-container{
         flex-direction: column;
         justify-content: space-around;
@@ -472,7 +472,7 @@ ol.flex-container > li{
         align-items: flex-start;
     }
 
-    #first-section > h2{
+    #first-section > div >h2{
         font-size: 38px;
     }
 
@@ -481,17 +481,17 @@ ol.flex-container > li{
         width: 100%;
     }
 
-    #first-section > div.flex-container{
+    #first-section > div >div.flex-container{
         margin: 13px 0px 0px 0px;
         gap: 15px;
     }
 
-    #first-section > span{
+    #first-section > div >span{
         padding: 0px 0px 30px 0px;
         font-size: 20px;
     }
 
-    #first-section > div.flex-container p{
+    #first-section > div >div.flex-container p{
         font-weight: 500;
         font-size: 15px;
     }
@@ -548,6 +548,271 @@ ol.flex-container > li{
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (min-width: 769px){
+    main.flex-container{
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 60px 90px;
+        width: 78%;
+        border: 0px 0px 0px 20%;
+        border-color: #aace9b;
+        padding: 3% 0px 0px 18%;
+    }
+    
+    section.flex-container{
+        border-color: #afafc2;
+        border-style: solid;
+        border-width: 0px 0px 3px 0px;
+        width: 95%;
+        padding: 0px 0px 30px 0px;
+    }
 
+    button{
+        border-width: 0px 0px 3px 0px;
+        width: 75px;
+        height: 38px;
+        border-radius: 5px;
+        border-width: 1px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    form.flex-container{
+        width: 100%;
+        gap: 25px 0px ;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* CLASSES */
+    .info-block.flex-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 47%;
+        width: 47%;
+        gap: 20px;
+    }
+
+    .text-of-infoblock.flex-container{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .text-of-infoblock h3{
+        font-size: 22px;
+    }
+
+    .text-of-infoblock.flex-container p{
+        font-size: 15px;
+    }
+
+    .img-of-infoblock{
+        height: 100%;
+        width: 140px;
+    }
+
+    .work-improv-art.flex-container{ 
+        justify-content: space-around;
+        padding: 20px;
+        width: 40%;
+        gap: 15px ;
+    }
+
+    .work-improv-art.flex-container > img{
+        border-radius: 5%;
+        width: 100%;
+        height: 280px;
+    }
+
+    .work-improv-art.flex-container > h3{
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .work-improvement-textbox.flex-container{
+        align-items: center;
+        font-size: 14px;
+    }
+    
+    .form-element.flex-container{
+        gap: 5px;
+        width: 100%;
+    }
+        
+    .form-element.flex-container select, 
+    .form-element.flex-container input, 
+    .form-element-big.flex-container textarea{
+        border-width: 1px;
+        border-radius: 5px;
+    }
+    
+    .form-element.flex-container select{
+        width: 92%;
+        height: 30px;
+    }
+    
+    .form-element.flex-container input{
+        width: 90%;
+        height: 30px;
+    }
+    
+    .form-element-big.flex-container{
+        align-self: flex-end;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .form-element-big.flex-container > textarea{
+        width: 95%;
+    }
+
+    .form-end-div.flex-container{
+        gap: 30px;
+        align-self: flex-end;
+    }
+
+    .half-form.flex-container{
+        width: 50%;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .form-end-element.flex-container{
+        gap: 30px;
+    }
+
+    .form-end-element.flex-container button{
+        width: 50%;
+        height: 45px;
+    }
+
+    .story-text.flex-container > p{
+        font-weight: 500;
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    .bottom-nav.flex-container{
+        gap: 80px;
+        flex-direction: row;
+    }
+
+    .bottom-nav-div.flex-container > b{
+        font-size: 16px;
+    }
+    
+    .bottom-nav-div.flex-container > ol >li{
+        margin: 0px 0px 0px 10px;
+    }
+
+    .bottom-nav-div.flex-container > ol > li > a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    /* ID'S */
+
+    #first-section.flex-container{
+        width: 100%;
+        flex-direction: row;
+        justify-content:baseline;
+    }
+
+    #first-section > div.flex-container{
+        width: 50%;
+        flex-wrap: wrap;
+        gap: 15px 150px;
+        justify-content: space-between;
+        height: 95%;
+    }
+
+    #first-section > div >h2{
+        font-size: 30px;
+    }
+
+    #first-section img{
+        width: 48%;
+        height: 100%;
+        order: 4;
+        border-radius: 20px;
+    }
+
+    #first-section > div > div.flex-container{
+        margin: 13px 0px 0px 0px;
+        gap: 15px;
+    }
+
+    #first-section > div > span{
+        font-size: 16x;
+        font-weight: 500;
+    }
+
+    #first-section > div > div.flex-container p{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    #first-section button{
+        width: 30%;
+        padding: 10px 0px 27px 0px;
+        align-self: flex-end;
+    }
+    
+    #info-block-section.flex-container{
+        gap: 20px;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0px 0px 90px 0px;
+    }
+
+    #info-block-section.flex-container > h2{
+        margin-right: 75%;
+    }
+
+    #work-improvement-articles-section.flex-container{
+        flex-direction: row;
+        gap: 40px 0px;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    #work-improvement-articles-section.flex-container h2{
+        align-self: left;
+        width: 90%;
+        margin: 0px 30% 0px 0px;
+    }
+
+    #get-in-touch.flex-container{
+        height: 20%;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    #priority.flex-container{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 93%;
+    }
+    
+    #priority.flex-container > li.flex-container > input{
+        width: auto;
+        height: auto;
+    }
+
+    #our-story.flex-container{
+        justify-content: start;
+        align-items: flex-start;
+        gap: 36px;
+    }
+    
+    #bottom-nav-section.flex-container{
+        padding: 0px 0px 90px 0px;
+        border-width: 0px 0px 8px 0px;
+        border-radius: 7px;
+    }
 }
