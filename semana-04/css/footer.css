@@ -150,8 +150,6 @@ footer section.flex-container{
     }
 
     footer > section :nth-child(1){
-        /* width: 40px;
-        height: 40px; */
         width: 30px;
         height: 30px;
     }

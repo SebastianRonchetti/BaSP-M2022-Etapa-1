@@ -18,7 +18,7 @@ Created index.html
 Created styles.css and implemented various styles onto the html.
 ```
 
-### Week 034
+### Week 04
 ```
 Created css files for each major part of the page and applied flexbox to said pages using media queries
 ```
