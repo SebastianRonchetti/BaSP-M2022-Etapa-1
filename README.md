@@ -22,4 +22,9 @@ Created styles.css and implemented various styles onto the html.
 ```
 Created css files for each major part of the page and applied flexbox to said pages using media queries
 ```
+
+### Week 05
+```
+javaScript based exercises and week 04 applied corrections
+```
 _By Sebastián Ronchetti_
