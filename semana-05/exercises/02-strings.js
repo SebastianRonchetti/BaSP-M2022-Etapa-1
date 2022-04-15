@@ -36,7 +36,7 @@ algún espacio en blanco. Encontrar la posición del primer espacio
 en blanco y guardarla en una variable (utilizar indexOf).*/
 console.log('Exercise 2.e:');
 var s1e = 'building bricks';
-resultE = s1e.indexOf(' ');
+var resultE = s1e.indexOf(' ');
 console.log('Result:' + resultE);
 
 /*Crear una variable de tipo string con al menos 2 palabras 
@@ -46,11 +46,11 @@ string que tenga la primera letra de ambas palabras en mayúscula
 y las demás letras en minúscula (utilizar indexOf, substring, 
 toUpperCase, toLowerCase y el operador +).*/
 console.log('Exercise 1.f:');
-var s1f = 'dependable craftsman';
+var s1f = 'dependable craftswoman';
 var index = s1f.indexOf(' ') + 1;
-resultF = s1f.substring(0,1).toUpperCase() + 
+var resultF = s1f.substring(0,1).toUpperCase() + 
     s1f.substring(1, index).toLowerCase() + 
     s1f.substring(index, index + 1 ).toUpperCase() +
     s1f.substring(index + 2, s1f.length);
-
+    
 console.log('Result:' + resultF);
