@@ -28,28 +28,29 @@ function randomInteger(min, max)
 }
 
 var Age = randomInteger(0, 100);
+console.log(Age)
 
 if(Age < 2)
 {
     console.log('Bebe')
 }
-else if(2 < Age > 12)
+else if(2 < Age && Age < 12)
 {
     console.log('Niño')
 }
-else if(13 < Age > 19)
+else if(13 < Age && Age < 19)
 {
     console.log('Adolescente')
 }
-else if(20 < Age > 30)
+else if(20 < Age && Age < 30)
 {
     console.log('Joven')
 }
-else if(31 < Age > 60)
+else if(31 < Age && Age < 60)
 {
     console.log('Adulto')
 }
-else if(61 < Age > 75)
+else if(61 < Age && Age < 75)
 {
     console.log('Adulto mayor')
 }

@@ -11,7 +11,7 @@ y generar un nuevo string con los primeros 5 caracteres
 guardando el resultado en una nueva variable (utilizar substring).*/
 console.log('Exercise 2.b:');
 var s1b = 'transactional';
-var resultB = s1b.substring(0, 4);
+var resultB = s1b.substring(0, 5);
 console.log('Result:' + resultB);
 
 /*Crear una variable de tipo string con al menos 10 caracteres y 
