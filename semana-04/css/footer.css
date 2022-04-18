@@ -1,9 +1,7 @@
-
-
 footer section.flex-container{
     border: none;
 }
-
+/* MOBILE */
 @media only screen and (max-width: 480px){
     footer{
         justify-content: space-around;
@@ -49,6 +47,7 @@ footer section.flex-container{
     }
 }
 
+/* TABLET */
 @media only screen and (min-width:480px) and (max-width: 768px){
     footer{
         justify-content: space-around;
@@ -109,6 +108,7 @@ footer section.flex-container{
     }
 }
 
+/* DESKTOP */
 @media only screen and (min-width: 769px){
     footer.flex-container{
         justify-content: space-evenly;

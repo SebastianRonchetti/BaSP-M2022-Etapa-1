@@ -9,9 +9,9 @@
 /*COMPONENTS*/
 
 body{
+    width: 100vw;
     font-family: 'Roboto';
     gap: 20px;
-    width: 100vw;
 }
 
 section{

@@ -19,11 +19,12 @@ main.flex-container{
 
 section.flex-container{
     flex-wrap: wrap;
+    width: 95%;
     justify-content: space-around;
     align-items: center;
     height: 20%;
     border-style: solid;
-    border-color: #aace9b;
+    border-color: #afafc2;
     border-width: 0px 0px 3px 0px;
 }
 
@@ -207,8 +208,22 @@ form.flex-container{
    
 #bottom-nav-section.flex-container{
     padding: 0px 0px 90px 0px;
-    border-width: 0px 0px 8px 0px;
-    border-radius: 7px;
+    border: none;
+}
+
+#submit-btn{
+    background-color: #aace9b;
+    color:#373867;
+    border:none;
+}
+
+#the-line{
+    width: 103%;
+    height: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #aace9b;
+    border-radius: 5px;
 }
 
 /* MOBILE */
@@ -301,6 +316,10 @@ form.flex-container{
         justify-content: space-around;
         gap: 20px 10px;
     }
+
+    #the-line{
+        width: 95%;
+    }
 }
 
 /* TABLET */
@@ -310,7 +329,6 @@ form.flex-container{
         border-color: #afafc2;
         border-style: solid;
         border-width: 0px 0px 3px 0px;
-        width: 95%;
         padding: 0px 0px 30px 0px;
     }
 
@@ -347,7 +365,6 @@ form.flex-container{
     .work-improv-art.flex-container{
         width: 40%;
     }
-
 
     .work-improv-art.flex-container > h3{
         font-size: 27px;
@@ -464,6 +481,10 @@ form.flex-container{
         align-items: flex-start;
         gap: 36px;
     }
+
+    #the-line{
+        width: 95%;
+    }
 }
 
 /* DESKTOP */
@@ -476,10 +497,8 @@ form.flex-container{
     }
     
     section.flex-container{
-        border-color: #afafc2;
         border-style: solid;
         border-width: 0px 0px 3px 0px;
-        width: 95%;
         padding: 0px 0px 30px 0px;
     }
 
@@ -635,9 +654,7 @@ form.flex-container{
     #work-improvement-articles-section.flex-container{
         flex-direction: row;
         gap: 40px 0px;
-        justify-content: space-between;
         align-items: flex-start;
-        width: 100%;
     }
 
     #work-improvement-articles-section.flex-container h2{
