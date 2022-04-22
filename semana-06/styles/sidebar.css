@@ -1,0 +1,96 @@
+a:link{
+    color: #373867;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #373867;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px){
+    aside.flex-container{
+        visibility: hidden;
+        height: 18%;
+        width: 0px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    aside.flex-container{
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    aside.flex-container{
+        background-color: #aace9b;
+        height: 100%;
+        width: 14%;
+        padding: 0px 0px 0px 1%;
+        top: 10%;
+        position: fixed;
+        justify-content: start;
+        gap: 20px;
+    }
+
+    aside > p{
+        font-size: 16px;
+        font-weight: bold;
+        height: 19px;
+        width: 33.64px;
+        border-bottom: 4px solid #373867;
+        padding: 10% 12% 0px 0px;
+    }
+
+    ul.first-aside-ul.flex-container{
+        width: 87%;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .li-of-sidebar{
+        padding: 0px 0px 13px 0px;
+        border-bottom: 2px solid #37386766;
+        width: 95%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .second-aside-article.flex-container{
+        gap: 0% 15%;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .second-aside-article.flex-container > p{
+        width: 100%;
+        padding: 15% 0px 10% 0px;
+    }
+    
+    ul.second-aside-ul.flex-container{
+        font-size: 14px;
+        font-weight: 500;
+        width: 87%;
+        gap: 20px;
+    }
+
+    .sidebar-icons.flex-container, .adress-nav.flex-container{
+        width: 100%;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .sidebar-icons.flex-container > a, .adress-nav.flex-container > a{
+        font-size: 10px;
+    }
+
+    .sidebar-icons.flex-container img, .adress-nav.flex-container > img{
+        height: 10%;
+        width: 10%;
+        margin: 0px 5% 0px 0px;
+    }
+}
