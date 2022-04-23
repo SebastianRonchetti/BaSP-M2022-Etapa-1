@@ -184,13 +184,13 @@ button{
     
     main{
         align-self: center;
-        height: 65%;
+        height: 75%;
         margin: 0px 0px 0px 14%
     }
 
     main section.flex-container{
         width: 75%;
-        height: 85%;
+        height: 60%;
         margin: 12% 0px 0px 11%;
         justify-content: center;
         justify-items: center;
@@ -198,6 +198,28 @@ button{
         border-radius: 2%;
         border-color: black;
         border-width: 5px;
+    }
+    
+    #pop-up.flex-container{
+        width: 40%;
+        height: 30%;
+        margin: 2% 0px 0px 30%;
+        align-items: center;
+        background-color: #aace9b;
+        border-style: solid;
+        border-radius: 2%;
+        border-color: black;
+        border-width: 2px;
+        gap: 15px;
+    }
+
+    #pop-up.flex-container > div.flex-container{
+        flex-direction: row;
+    }
+
+    #pop-up.flex-container .descriptor{
+        font-weight: bold;
+        font-size: 14px;
     }
 
     main section.flex-container h2{
