@@ -1,31 +1,31 @@
-const eMailField = document.querySelector('#eMail');
-const passwordField = document.querySelector('#password');
-const popUpField = document.querySelector('#pop-up');
+const eMailField = document.querySelector("#eMail");
+const passwordField = document.querySelector("#password");
+const popUpField = document.querySelector("#pop-up");
 var correctMail;
 var correctPass;
-//popUpField.style.visibility = 'hidden';
+//popUpField.style.visibility = "hidden";
 
-var mailAlert = document.createElement('p');
+var mailAlert = document.createElement("p");
 var mailAlertText = document.createTextNode('Invalid E-mail format');
-mailAlert.style.fontSize = '12px';
-mailAlert.style.color = 'red';
-mailAlert.style.fontWeight = 'bold';
+mailAlert.style.fontSize = "12px";
+mailAlert.style.color = "red";
+mailAlert.style.fontWeight = "bold";
 mailAlert.appendChild(mailAlertText);
-mailAlert.style.visibility = 'hidden';
+mailAlert.style.visibility = "hidden";
 
-var passwordAlert = document.createElement('p');
+var passwordAlert = document.createElement("p");
 var passwordAlertText = document.createTextNode('Invalid Password format');
-passwordAlert.style.fontSize = '12px';
-passwordAlert.style.color = 'red';
-passwordAlert.style.fontWeight = 'bold';
+passwordAlert.style.fontSize = "12px";
+passwordAlert.style.color = "red";
+passwordAlert.style.fontWeight = "bold";
 passwordAlert.appendChild(passwordAlertText);
-passwordAlert.style.visibility = 'hidden';
+passwordAlert.style.visibility = "hidden";
 
-eMailField.addEventListener('blur', () => verifyMail(eMailField));
-eMailField.addEventListener('focus', () => onMailFocus());
+eMailField.addEventListener("blur", verifyMail(eMailField));
+eMailField.addEventListener("focus", () => onMailFocus());
 
-passwordField.addEventListener('blur', () => verifyPassword(passwordField));
-passwordField.addEventListener('focus', () => onPasswordFocus())
+passwordField.addEventListener("blur", () => verifyPassword(passwordField));
+passwordField.addEventListener("focus", () => onPasswordFocus())
 
 function verifyMail(toVerify)
 {
@@ -34,8 +34,8 @@ function verifyMail(toVerify)
     var testResult = mailFormat.test(toVerify.value);
     if(!testResult){
         correctMail = false;
-        eMailField.insertAdjacentElement('afterend', mailAlert);
-        mailAlert.style.visibility = 'visible'
+        eMailField.insertAdjacentElement("afterend", mailAlert);
+        mailAlert.style.visibility = "visible"
     }
     else
     {
@@ -55,8 +55,8 @@ function verifyPassword(toVerifyPass)
     var lengthOfPass = toVerifyPass.value.length;
     
     if(lengthOfPass < 8 || !hasLetters || !hasNumber){
-        passwordField.insertAdjacentElement('afterend', passwordAlert);
-        passwordAlert.style.visibility = 'visible'
+        passwordField.insertAdjacentElement("afterend", passwordAlert);
+        passwordAlert.style.visibility = "visible"
     }
     else
     {
@@ -68,35 +68,35 @@ function onPasswordFocus(){
     passwordAlert.parentElement.removeChild(passwordAlert);
 }
 
-const fieldSection = document.querySelector('section.flex-container');
+const fieldSection = document.querySelector(".form-section.flex-container");
 
-var resultSection = document.createElement('section');
-resultSection.id = 'pop-up';
-resultSection.classList.add('flex-container');
+var resultSection = document.createElement("section");
+resultSection.id = "pop-up";
+resultSection.classList.add("flex-container");
 
-var text1 = document.createElement('p');
-text1.classList.add('descriptor');
+var text1 = document.createElement("p");
+text1.classList.add("descriptor");
 var text1Value = document.createTextNode('Email:');
 text1.appendChild(text1Value);
 
-var text2 = document.createElement('p');
-text2.classList.add('descriptor');
+var text2 = document.createElement("p");
+text2.classList.add("descriptor");
 var text2Value = document.createTextNode('Password: ');
 text2.appendChild(text2Value);
 
-resultSection.appendChild(text1, 'beforeend');
-resultSection.appendChild(text2, 'beforeend');
+resultSection.appendChild(text1, "beforeend");
+resultSection.appendChild(text2, "beforeend");
 
-const logInButton = document.querySelector('#login');
+const logInButton = document.querySelector("#login");
 
-logInButton.addEventListener('click', () => onLogInClick());
+logInButton.addEventListener("click", () => onLogInClick());
 
 function onLogInClick()
 {
     if(correctPass && correctMail){
         text1Value.textContent = 'E-Mail: ' + eMailField.value;
         text2Value.textContent = 'Password: ' + passwordField.value;
-        fieldSection.insertAdjacentElement('afterend', resultSection);
+        fieldSection.insertAdjacentElement("afterend", resultSection);
     }
     else
     {

@@ -27,7 +27,7 @@ function suma2(first, second){
         + '\nSecond is not a number: ' + isNaN(second))
     }
 }
-result2 = suma2('b', 5);
+var result2 = suma2('b', 5);
 console.log('Result:' + result2);
 
 /*Crear una función validate integer que reciba un número como
@@ -45,7 +45,7 @@ function validateInteger(number){
     }
 }
 
-result3 = validateInteger(10);
+var result3 = validateInteger(10);
 console.log('Result:' + result3);
 
 /*A la función suma del ejercicio 6b) agregarle una llamada que
@@ -78,7 +78,7 @@ function suma4(first, second){
         + '\nSecond is not a number: ' + isNaN(second))
     }
 }
-result4 = suma4(4.6, 9);
+var result4 = suma4(4.6, 9);
 console.log('Result:' + result4);
 
 /*Convertir la validación del ejercicio 6d) en una función separada
@@ -91,7 +91,11 @@ function suma5(first, second){
     return first + second;
 }
 function validateInputs(number){
-    if(!isNaN(number)){
+    if(isNaN(number)){
+        window.alert('Ex E: \nInput is not a number' + isNaN(first))
+    }
+    else
+    {
         if(validateInteger(number)){
             return number;
         }
@@ -101,10 +105,6 @@ function validateInputs(number){
             return parseInt(number.toFixed());
         }
     }
-    else
-    {
-        window.alert('Ex E: \nInput is not a number' + isNaN(first))
-    }
 }
-result5 = suma5(5, 4.8)
+var result5 = suma5(5, 4.8)
 console.log('Result:' + result5);
