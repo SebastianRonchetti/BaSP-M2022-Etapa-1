@@ -57,11 +57,14 @@ alertConstructor(passwordConfirmAlert, passwordConfirmAlertText);
 function hasLetters(toVerifyLetters)
 {
     /*const hasLetters = /^(?!-)(?!.*-)[A-Za-z0-9-]+(?<!-)$/.test(toVerifyLetters.value);*/
-    var arrToCheck = Array.from(toVerifyLetters);
+    var arrToCheck = Array.from(toVerifyLetters.value);
+    console.log(arrToCheck)
+    console.log('hasLetters')
     for(var i = 0; i < arrToCheck.length; i++)
     {
-        if(!isNaN(arrToCheck[i]))
+        if(isNaN(arrToCheck[i]))
         {
+            console.log(arrToCheck[i]);
             return true;
         }
     }
@@ -70,12 +73,14 @@ function hasLetters(toVerifyLetters)
 
 function hasNumber(toVerifyNumber)
 {
+    console.log('hasnumbers')
     /*const hasNumber = /\d+/.test(toverifyNumber.value);*/
-    var arrToCheck = Array.from(toVerifyNumber);
+    var arrToCheck = Array.from(toVerifyNumber.value);
     for(var i = 0; i < arrToCheck.length; i++)
     {
-        if(isNaN(arrToCheck[i]))
+        if(!isNaN(arrToCheck[i]))
         {
+            console.log(arrToCheck[i]);
             return true;
         }
     }
@@ -100,11 +105,15 @@ function checkLengthBetween(toVerifyLength, targetLow, targetTop)
 function checkLength(toVerifyLength, targetLow)
 {
     var holder = toVerifyLength.value.length
-    if(holder < targetLow){
+    console.log(holder)
+    if(holder < targetLow)
+    {
+        console.log('not big enough')
         return false;
     }
     else
     {
+        console.log('pass length')
         return true;
     }
 }
@@ -139,7 +148,7 @@ var passwordConfirmRight = false;
 
 function verifyName(toVerifyName)
 {
-    if(!checkLenght(toVerifyName, 3) || hasNumber(toVerifyName))
+    if(!checkLength(toVerifyName, 3) || hasNumber(toVerifyName))
     {
         toVerifyName.insertAdjacentElement("afterend", nameAlert);
         nameAlert.style.visibility = "visible";
@@ -153,7 +162,7 @@ function verifyName(toVerifyName)
 
 function verifySurName(toVerifyName)
 {
-    if(!checkLenght(toVerifyName, 3) || hasNumber(toVerifyName))
+    if(!checkLength(toVerifyName, 3) || hasNumber(toVerifyName))
     {
         toVerifyName.insertAdjacentElement("afterend", surNameAlert);
         surNameAlert.style.visibility = "visible";
@@ -167,7 +176,7 @@ function verifySurName(toVerifyName)
 
 function verifyDNI(toVerifyDni)
 {
-    if(hasLetters(toVerifyDni) || checkLenght(toVerifyDni, 7))
+    if(hasLetters(toVerifyDni) || checkLength(toVerifyDni, 7))
     {
         toVerifyDni.insertAdjacentElement("afterend", dniAlert);
         dniAlert.style.visibility = "visible";
@@ -268,7 +277,7 @@ function verifyPostal(toVerifyPostal)
 
 function verifyPassword(toVerifyPass)
 {
-    if(!hasLetters(toVerifyPass) || !hasNumber(toVerifyPass) || checkLength(toVerifyPass, 8))
+    if(!hasLetters(toVerifyPass) || !hasNumber(toVerifyPass) || !checkLength(toVerifyPass, 8))
     {
         passwordField.insertAdjacentElement("afterend", passwordAlert);
         passwordAlert.style.visibility = "visible";
@@ -282,8 +291,8 @@ function verifyPassword(toVerifyPass)
 
 function verifyPasswordConfirmed(toVerifyPassConf, comparePass)
 {
-    if(!hasLetters(toVerifyPass) || !hasNumber(toVerifyPass) 
-    || checkLength(toVerifyPass, 8) || toVerifyPassConf.value !== comparePass.value)
+    if(!hasLetters(toVerifyPassConf) || !hasNumber(toVerifyPassConf) 
+    || !checkLength(toVerifyPassConf, 8) || toVerifyPassConf.value !== comparePass.value)
     {
         passwordConfirmField.insertAdjacentElement("afterend", passwordConfirmAlert);
         passwordConfirmAlert.style.visibility = "visible";
@@ -350,82 +359,105 @@ function onFocus()
     passwordConfirmAlert.parentElement.removeChild(passwordConfirmAlert);
 }
 
-firstNameField.addEventListener("blur", () => verifyName(firstNameField));
-firstNameField.addEventListener("focus", () => onNameFocus());
+firstNameField.addEventListener("blur", function()
+{
+    verifyName(firstNameField);
+});
+firstNameField.addEventListener("focus", function()
+{
+    onNameFocus();
+});
 
-surNameField.addEventListener("blur", () => verifySurName(surNameField));
-surNameField.addEventListener("focus", () => onSurnameFocus());
+surNameField.addEventListener("blur", function()
+{
+    verifySurName(surNameField);
+});
+surNameField.addEventListener("focus", function()
+{
+    onSurnameFocus();
+});
 
-dniField.addEventListener("blur", () => verifyDNI(dniField));
-dniField.addEventListener("focus", () => onDniFocus());
+dniField.addEventListener("blur", function()
+{
+    verifyDNI(dniField);
+} );
+dniField.addEventListener("focus", function()
+{
+    onDniFocus();
+});
 
-birthDateField.addEventListener("blur", () => verifyDate(birthDateField));
-birthDateField.addEventListener("focus", () => onBirthFocus());
+birthDateField.addEventListener("blur", function()
+{
+    verifyDate(birthDateField);
+});
+birthDateField.addEventListener("focus", function()
+{
+    onBirthFocus();
+});
 
-phoneField.addEventListener("blur", () => verifyPhone(phoneField));
-phoneField.addEventListener("focus", () => onPhoneFocus());
+phoneField.addEventListener("blur", function()
+{
+    verifyPhone(phoneField);
+});
+phoneField.addEventListener("focus", function()
+{
+    onPhoneFocus();
+});
 
-emailField.addEventListener("blur", () => verifyMail(emailField));
-emailField.addEventListener("focus", () => onMailFocus());
+emailField.addEventListener("blur", function()
+{
+    verifyMail(emailField);
+});
+emailField.addEventListener("focus", function()
+{
+    onMailFocus();
+});
 
-adressField.addEventListener("blur", () => verifyAdress(adressField));
-adressField.addEventListener("focus", () => onAdressFocus());
+adressField.addEventListener("blur", function()
+{
+    verifyAdress(adressField);
+});
+adressField.addEventListener("focus", function()
+{
+    onAdressFocus();
+});
 
-locationField.addEventListener("blur", () => verifyLocation(locationField));
-locationField.addEventListener("focus", () => onLocationFocus());
+locationField.addEventListener("blur", function()
+{
+    verifyLocation(locationField);
+});
+locationField.addEventListener("focus", function()
+{
+    onLocationFocus();
+});
 
-postalField.addEventListener("blur", () => verifyPostal(postalField));
-postalField.addEventListener("focus", () => onPostalFocus());
+postalField.addEventListener("blur", function()
+{
+    verifyPostal(postalField);
+});
+postalField.addEventListener("focus", function()
+{
+    onPostalFocus();
+});
 
-passwordField.addEventListener("blur", () => verifyPassword(passwordField));
-passwordField.addEventListener("focus", () => onPasswordFocus());
+passwordField.addEventListener("blur", function()
+{
+    verifyPassword(passwordField);
+});
+passwordField.addEventListener("focus", function()
+{
+    onPasswordFocus();
+});
 
-passwordConfirmField.addEventListener("blur", () => verifyPasswordConfirmed(passwordConfirmField, passwordField));
-passwordConfirmField.addEventListener("focus", () => onPassConFocus());
-
-{/* <section id="pop-up" class="flex-container">
-            <div class="fields flex-container">
-                <div class="field-holder flex-container">
-
-                </div>
-                <div class="field-holder flex-container">
-    
-                </div>
-                <div class="field-holder flex-container">
-    
-                </div>
-            </div>
-            <div class="fields flex-container">
-                <div class="field-holder flex-container">
-
-                </div>
-                <div class="field-holder flex-container">
-    
-                </div>
-                <div class="field-holder flex-container">
-
-                </div>
-            </div>
-            <div class="fields flex-container">
-                <div class="field-holder flex-container">
-
-                </div>
-                <div class="field-holder flex-container">
-    
-                </div>
-                <div class="field-holder flex-container">
-    
-                </div>
-            </div>
-            <div class="fields flex-container">
-                <div class="field-holder flex-container">
-
-                </div>
-                <div class="field-holder flex-container">
-    
-                </div>
-            </div>
-        </section> */}
+passwordConfirmField.addEventListener("blur", function()
+{
+    verifyPasswordConfirmed(passwordConfirmField, passwordField)
+    console.log('function call')
+});
+passwordConfirmField.addEventListener("focus", function()
+{
+    onPassConFocus();
+});
 
 var resultSection = document.createElement("section");
 resultSection.id = "pop-up";
@@ -442,39 +474,6 @@ fields3.classList.add("fields","flex-container");
 
 var fields4 = document.createElement("div");
 fields4.classList.add("fields","flex-container");
-
-/*var fieldHolder1 = document.createElement("div");
-fieldholder1.classList.add("field-holder", "flex-container");
-
-var fieldHolder2 = document.createElement("div");
-fieldholder2.classList.add("field-holder", "flex-container");
-
-var fieldHolder3 = document.createElement("div");
-fieldholder3.classList.add("field-holder", "flex-container");
-
-var fieldHolder4 = document.createElement("div");
-fieldholder4.classList.add("field-holder", "flex-container");
-
-var fieldHolder5 = document.createElement("div");
-fieldholder5.classList.add("field-holder", "flex-container");
-
-var fieldHolder6 = document.createElement("div");
-fieldholder6.classList.add("field-holder", "flex-container");
-
-var fieldHolder7 = document.createElement("div");
-fieldholder7.classList.add("field-holder", "flex-container");
-
-var fieldHolder8 = document.createElement("div");
-fieldholder8.classList.add("field-holder", "flex-container");
-
-var fieldHolder9 = document.createElement("div");
-fieldholder9.classList.add("field-holder", "flex-container");
-
-var fieldHolder10 = document.createElement("div");
-fieldholder10.classList.add("field-holder", "flex-container");
-
-var fieldHolder11 = document.createElement("div");
-fieldholder11.classList.add("field-holder", "flex-container");*/
 
 var nameResult = document.createElement("p");
 nameResult.classList.add("descriptor")
@@ -581,4 +580,7 @@ function displayResults()
 }
 
 var submitButton = document.querySelector("#submit");
-submitButton.addEventListener("click", () => displayResults());
+submitButton.addEventListener("click", function()
+{
+    displayResults()
+});

@@ -21,11 +21,70 @@ passwordAlert.style.fontWeight = "bold";
 passwordAlert.appendChild(passwordAlertText);
 passwordAlert.style.visibility = "hidden";
 
-eMailField.addEventListener("blur", verifyMail(eMailField));
-eMailField.addEventListener("focus", () => onMailFocus());
+function hasLetters(toVerifyLetters)
+{
+    /*const hasLetters = /^(?!-)(?!.*-)[A-Za-z0-9-]+(?<!-)$/.test(toVerifyLetters.value);*/
+    var arrToCheck = Array.from(toVerifyLetters.value);
+    console.log(arrToCheck)
+    for(var i = 0; i < arrToCheck.length; i++)
+    {
+        if(isNaN(arrToCheck[i]))
+        {
+            console.log(arrToCheck[i]);
+            return true;
+        }
+    }
+    return false;
+}
 
-passwordField.addEventListener("blur", () => verifyPassword(passwordField));
-passwordField.addEventListener("focus", () => onPasswordFocus())
+function hasNumber(toVerifyNumber)
+{
+    /*const hasNumber = /\d+/.test(toverifyNumber.value);*/
+    var arrToCheck = Array.from(toVerifyNumber.value);
+    for(var i = 0; i < arrToCheck.length; i++)
+    {
+        if(!isNaN(arrToCheck[i]))
+        {
+            console.log(arrToCheck[i]);
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkLength(toVerifyLength, targetLow)
+{
+    var holder = toVerifyLength.value.length
+    console.log(holder)
+    if(holder < targetLow)
+    {
+        console.log('not big enough')
+        return false;
+    }
+    else
+    {
+        console.log('pass length')
+        return true;
+    }
+}
+
+eMailField.addEventListener("blur", function()
+{
+    verifyMail(eMailField);
+});
+eMailField.addEventListener("focus", function()
+{
+    onMailFocus();
+});
+
+passwordField.addEventListener("blur", function() 
+{
+    verifyPassword(passwordField);
+});
+passwordField.addEventListener("focus", function()
+{
+    onPasswordFocus();
+})
 
 function verifyMail(toVerify)
 {
@@ -50,11 +109,8 @@ function onMailFocus()
 
 function verifyPassword(toVerifyPass)
 {
-    const hasNumber = /\d+/.test(toVerifyPass.value);
-    const hasLetters = /^(?!-)(?!.*-)[A-Za-z0-9-]+(?<!-)$/.test(toVerifyPass.value);
-    var lengthOfPass = toVerifyPass.value.length;
-    
-    if(lengthOfPass < 8 || !hasLetters || !hasNumber){
+    if(lengthOfPass < 8 || !hasLetters(toVerifyPass) || !hasNumber(toVerifyPass))
+    {
         passwordField.insertAdjacentElement("afterend", passwordAlert);
         passwordAlert.style.visibility = "visible"
     }
@@ -89,8 +145,6 @@ resultSection.appendChild(text2, "beforeend");
 
 const logInButton = document.querySelector("#login");
 
-logInButton.addEventListener("click", () => onLogInClick());
-
 function onLogInClick()
 {
     if(correctPass && correctMail){
@@ -103,3 +157,8 @@ function onLogInClick()
         window.alert('Check for correct E-mail and password values');
     }
 }
+
+logInButton.addEventListener("click", function()
+{
+    onLogInClick()
+});
