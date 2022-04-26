@@ -124,6 +124,12 @@ function dateChecker(dateToCheck)
     var isoFormattedStr = `${year}-${month}-${day}`;
 
     var date = new Date(isoFormattedStr);
+    var today = new Date();
+
+    if(date.getTime() >= today.getTime())
+    {
+        return false;
+    }
 
     var timestamp = date.getTime();
 
@@ -460,7 +466,7 @@ passwordConfirmField.addEventListener("focus", function()
 });
 
 var resultSection = document.createElement("section");
-resultSection.id = "pop-up";
+resultSection.id = "popup";
 resultSection.classList.add("flex-container");
 
 var fields1 = document.createElement("div");
