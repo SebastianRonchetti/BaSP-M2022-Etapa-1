@@ -1,6 +1,6 @@
 const eMailField = document.querySelector("#eMail");
 const passwordField = document.querySelector("#password");
-const popUpField = document.querySelector("#pop-up");
+const popUpField = document.querySelector("#popup");
 var correctMail;
 var correctPass;
 //popUpField.style.visibility = "hidden";
@@ -127,7 +127,7 @@ function onPasswordFocus(){
 const fieldSection = document.querySelector(".form-section.flex-container");
 
 var resultSection = document.createElement("section");
-resultSection.id = "pop-up";
+resultSection.id = "popup";
 resultSection.classList.add("flex-container");
 
 var text1 = document.createElement("p");
