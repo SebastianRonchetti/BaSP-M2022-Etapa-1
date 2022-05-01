@@ -32,4 +32,9 @@ javaScript based exercises and week 04 applied corrections
 ```
 Applied Sign-up and Log in screens aplying javascript
 ```
+
+### Week 07
+```
+Server verification process
+```
 _By Sebastián Ronchetti_

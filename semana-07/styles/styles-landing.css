@@ -1,0 +1,33 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+@import url(./header.css);
+@import url(./sidebar.css);
+@import url(./main.css);
+@import url(./footer.css);
+
+/*COMPONENTS*/
+
+body{
+    width: 100vw;
+    font-family: 'Roboto';
+    gap: 20px;
+}
+
+section{
+    width: 88%;
+    padding: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p, b, h2, h3, h4, a, span, pre, label, input, select, textarea{
+    font-family: 'Roboto';
+    color: #373867;
+}
