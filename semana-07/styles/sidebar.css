@@ -78,17 +78,17 @@ a:visited{
         gap: 20px;
     }
 
-    .sidebar-icons.flex-container, .adress-nav.flex-container{
+    .sidebar-icons.flex-container, .address-nav.flex-container{
         width: 100%;
         flex-direction: row;
         justify-content: start;
     }
 
-    .sidebar-icons.flex-container > a, .adress-nav.flex-container > a{
+    .sidebar-icons.flex-container > a, .address-nav.flex-container > a{
         font-size: 10px;
     }
 
-    .sidebar-icons.flex-container img, .adress-nav.flex-container > img{
+    .sidebar-icons.flex-container img, .address-nav.flex-container > img{
         height: 10%;
         width: 10%;
         margin: 0px 5% 0px 0px;

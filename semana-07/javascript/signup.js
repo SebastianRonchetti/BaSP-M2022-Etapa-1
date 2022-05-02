@@ -4,7 +4,7 @@ const dniField = document.querySelector("#dni");
 const birthDateField = document.querySelector("#birth");
 const phoneField = document.querySelector("#phone");
 const emailField = document.querySelector("#email");
-const adressField = document.querySelector("#adress");
+const addressField = document.querySelector("#address");
 const locationField = document.querySelector("#location");
 const postalField = document.querySelector("#postal");
 const passwordField = document.querySelector("#password");
@@ -37,9 +37,9 @@ alertConstructor(phoneAlert, phoneAlertText);
 var emailAlert = document.createElement("p");
 var emailAlertText = document.createTextNode('Invalid input');
 alertConstructor(emailAlert, emailAlertText);
-var adressAlert = document.createElement("p");
-var adressAlertText = document.createTextNode('Invalid input');
-alertConstructor(adressAlert, adressAlertText);
+var addressAlert = document.createElement("p");
+var addressAlertText = document.createTextNode('Invalid input');
+alertConstructor(addressAlert, addressAlertText);
 var locationAlert = document.createElement("p");
 var locationAlertText = document.createTextNode('Invalid input');
 alertConstructor(locationAlert, locationAlertText);
@@ -65,7 +65,6 @@ function hasLetters(toVerifyLetters)
             return true;
         }
     }
-    console.log('its the letters')
     return false;
 }
 
@@ -81,7 +80,6 @@ function hasNumber(toVerifyNumber)
         }
     }
     
-    console.log('its the numbers')
     return false;
 }
 
@@ -103,7 +101,6 @@ function checkLength(toVerifyLength, targetLow)
     var holder = toVerifyLength.value.length
     if(holder < targetLow)
     {
-        console.log('nuh huh')
         return false;
     }
     else
@@ -115,7 +112,7 @@ function checkLength(toVerifyLength, targetLow)
 function toDMY(date)
 {
     var [year, month, day] = date.value.split("-");
-    var DMYdate = `${month}/${day}/${year}`;
+    var DMYdate = `${day}/${month}/${year}`;
     return DMYdate;
 }
 
@@ -128,7 +125,7 @@ function toMDY(date)
 
 function toYMD(date)
 {
-    var [day, month, year] = date.value.split("/");
+    var [day, month, year] = date.value.split("-");
     var YMDdate = `${year}-${month}-${day}`;
     return YMDdate;
 }
@@ -140,17 +137,12 @@ function dateChecker(dateToCheck)
 
     var timestamp = date.getTime();
 
-    if (typeof timestamp !== "number" || Number.isNaN(timestamp))
-    {
-        return false;
-    }
-
     if(timestamp >= today.getTime())
     {
         return false;
     }
 
-    return date.toISOString().startsWith(isoFormattedStr);
+    return true;
 }
 
 var nameRight = false;
@@ -159,7 +151,7 @@ var dniRight = false;
 var birthRight = false;
 var phoneRight = false;
 var mailRight = false;
-var adressRight = false;
+var addressRight = false;
 var locationRight
 var postalRight = false;
 var passwordRight = false;
@@ -195,7 +187,7 @@ function verifySurName(toVerifyName)
 
 function verifyDNI(toVerifyDni)
 {
-    if(hasLetters(toVerifyDni) || !checkLength(toVerifyDni, 7))
+    if(hasLetters(toVerifyDni) || !checkLengthBetween(toVerifyDni, 7, 8))
     {
         toVerifyDni.insertAdjacentElement("afterend", dniAlert);
         dniAlert.style.visibility = "visible";
@@ -223,7 +215,7 @@ function verifyDate(toVerifyDate)
 
 function verifyPhone(toVerifyPhone)
 {
-    if(hasLetters(toVerifyPhone) || !checkLengthBetween(toVerifyPhone, 9, 11))
+    if(hasLetters(toVerifyPhone) || !checkLengthBetween(toVerifyPhone, 10, 10))
     {
         toVerifyPhone.insertAdjacentElement("afterend", phoneAlert);
         phoneAlert.style.visibility = "visible";
@@ -238,7 +230,8 @@ function verifyPhone(toVerifyPhone)
 function verifyMail(toVerifyMail)
 {    
     var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var testResult = mailFormat.test(toVerify.value);
+    var testResult = mailFormat.test(toVerifyMail.value);
+    
     if(testResult)
     {        
         emailField.insertAdjacentElement("afterend", emailAlert);
@@ -251,18 +244,18 @@ function verifyMail(toVerifyMail)
     }
 }
 
-function verifyAdress(toVerifyAdress)
+function verifyAddress(toVerifyAddress)
 {
-    var space = toVerifyAdress.value.indexOf(" ");
-    if(!hasLetters(toVerifyAdress) || !hasNumber(toVerifyAdress) || space == -1)
+    var space = toVerifyAddress.value.indexOf(" ");
+    if(!hasLetters(toVerifyAddress) || !hasNumber(toVerifyAddress) || space == -1)
     {
-        adressField.insertAdjacentElement("afterend", adressAlert);
-        adressAlert.style.visibility = "visible";
-        adressRight = false;
+        addressField.insertAdjacentElement("afterend", addressAlert);
+        addressAlert.style.visibility = "visible";
+        addressRight = false;
     }
     else
     {
-        adressRight = true;
+        addressRight = true;
     }
 }
 
@@ -353,9 +346,9 @@ function onMailFocus()
     emailAlert.parentElement.removeChild(emailAlert);
 }
 
-function onAdressFocus()
+function onAddressFocus()
 {
-    adressAlert.parentElement.removeChild(adressAlert);
+    addressAlert.parentElement.removeChild(addressAlert);
 }
 
 function onLocationFocus()
@@ -432,13 +425,13 @@ emailField.addEventListener("focus", function()
     onMailFocus();
 });
 
-adressField.addEventListener("blur", function()
+addressField.addEventListener("blur", function()
 {
-    verifyAdress(adressField);
+    verifyAddress(addressField);
 });
-adressField.addEventListener("focus", function()
+addressField.addEventListener("focus", function()
 {
-    onAdressFocus();
+    onAddressFocus();
 });
 
 locationField.addEventListener("blur", function()
@@ -487,87 +480,91 @@ fields1.classList.add("fields","flex-container");
 var fields2 = document.createElement("div");
 fields2.classList.add("fields","flex-container");
 
-var fields3 = document.createElement("div");
-fields3.classList.add("fields","flex-container");
-
-var fields4 = document.createElement("div");
-fields4.classList.add("fields","flex-container");
-
 var nameResult = document.createElement("p");
-nameResult.classList.add("descriptor")
-var nameResultText = document.createTextNode('Name: ' + firstNameField.value);
-nameResult.appendChild(nameResultText);
+nameResult.classList.add("descriptor");
 
 var surNameResult = document.createElement("p");
-surNameResult.classList.add("descriptor")
-var surNameResultText = document.createTextNode('Surname: ' + surNameField.value);
-surNameResult.appendChild(surNameResultText);
+surNameResult.classList.add("descriptor");
 
 var dniResult = document.createElement("p");
-dniResult.classList.add("descriptor")
-var dniResultText = document.createTextNode('DNI: ' + dniField.value);
-dniResult.appendChild(dniResultText);
+dniResult.classList.add("descriptor");
 
 var birthResult = document.createElement("p");
-birthResult.classList.add("descriptor")
-var birthResultText = document.createTextNode('Date of Birth: ' + birthDateField.value);
-birthResult.appendChild(birthResultText);
+birthResult.classList.add("descriptor");
 
 var phoneResult = document.createElement("p");
-phoneResult.classList.add("descriptor")
-var phoneResultText = document.createTextNode('Phone: ' + phoneField.value);
-phoneResult.appendChild(phoneResultText);
+phoneResult.classList.add("descriptor");
 
 var emailResult = document.createElement("p");
-emailResult.classList.add("descriptor")
-var emailResultText = document.createTextNode('Email: ' + emailField.value);
-emailResult.appendChild(emailResultText);
+emailResult.classList.add("descriptor");
 
-var adressResult = document.createElement("p");
-adressResult.classList.add("descriptor")
-var adressResultText = document.createTextNode('Adress: ' + adressField.value);
-adressResult.appendChild(adressResultText);
+var addressResult = document.createElement("p");
+addressResult.classList.add("descriptor");
 
 var locationResult = document.createElement("p");
-locationResult.classList.add("descriptor")
-var locationResultText = document.createTextNode('Location: ' + locationField.value);
-locationResult.appendChild(locationResultText);
+locationResult.classList.add("descriptor");
 
 var postalResult = document.createElement("p");
-postalResult.classList.add("descriptor")
-var postalResultText = document.createTextNode('Postal: ' + postalField.value);
-postalResult.appendChild(postalResultText);
+postalResult.classList.add("descriptor");
 
 var passwordResult = document.createElement("p");
-passwordResult.classList.add("descriptor")
-var passwordResultText = document.createTextNode('Password' + passwordField.value);
-passwordResult.appendChild(passwordResultText);
+passwordResult.classList.add("descriptor");
 
 var passwordConfirmResult = document.createElement("p");
-passwordConfirmResult.classList.add("descriptor")
-var passwordConfirmResultText = document.createTextNode('Password Confirmation: '
+passwordConfirmResult.classList.add("descriptor");
+
+function appendResults()
+{
+    var nameResultText = document.createTextNode('Name: ' + firstNameField.value);
+    nameResult.appendChild(nameResultText);
+
+    var surNameResultText = document.createTextNode('Surname: ' + surNameField.value);
+    surNameResult.appendChild(surNameResultText);
+
+    var dniResultText = document.createTextNode('DNI: ' + dniField.value);
+    dniResult.appendChild(dniResultText);
+
+    var birthResultText = document.createTextNode('Date of Birth: ' + toDMY(birthDateField));
+    birthResult.appendChild(birthResultText);
+
+    var phoneResultText = document.createTextNode('Phone: ' + phoneField.value);
+    phoneResult.appendChild(phoneResultText);
+
+    var emailResultText = document.createTextNode('Email: ' + emailField.value);
+    emailResult.appendChild(emailResultText);
+
+    var addressResultText = document.createTextNode('Address: ' + addressField.value);
+    addressResult.appendChild(addressResultText);
+
+    var locationResultText = document.createTextNode('Location: ' + locationField.value);
+    locationResult.appendChild(locationResultText);
+
+    var postalResultText = document.createTextNode('Postal: ' + postalField.value);
+    postalResult.appendChild(postalResultText);
+
+    var passwordResultText = document.createTextNode('Password: ' + passwordField.value);
+    passwordResult.appendChild(passwordResultText);
+
+    var passwordConfirmResultText = document.createTextNode('Password Confirmation: '
     + passwordConfirmField.value);
-passwordConfirmResult.appendChild(passwordConfirmResultText);
+    passwordConfirmResult.appendChild(passwordConfirmResultText);
+}
 
 fields1.appendChild(nameResult);
 fields1.appendChild(surNameResult);
 fields1.appendChild(dniResult);
+fields1.appendChild(birthResult);
+fields1.appendChild(phoneResult);
+fields1.appendChild(emailResult);
 
-fields2.appendChild(birthResult);
-fields2.appendChild(phoneResult);
-fields2.appendChild(emailResult);
-
-fields3.appendChild(adressResult);
-fields3.appendChild(locationResult);
-fields3.appendChild(postalResult);
-
-fields4.appendChild(passwordResult);
-fields4.appendChild(passwordConfirmResult);
+fields2.appendChild(addressResult);
+fields2.appendChild(locationResult);
+fields2.appendChild(postalResult);
+fields2.appendChild(passwordResult);
+fields2.appendChild(passwordConfirmResult);
 
 resultSection.appendChild(fields1);
 resultSection.appendChild(fields2);
-resultSection.appendChild(fields3);
-resultSection.appendChild(fields4);
 
 var signuSitepUrl = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
 // - name
@@ -580,19 +577,15 @@ var signuSitepUrl = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
 // - zip
 // - email
 // - password
-// '?','name=', nameToSend, '&lastName=', surNameToSend,
-//     '&dni=', dniToSend, '&dob=', dateToSend, '&phone=', phoneToSend,
-//     '&adress=', adressToSend, '&city=', locationToSend, '&zip=', zipToSend, 
-//     '&email=', emailToSend, '&password=', passwordToSend
 
 function saveOnLocal()
 {
     localStorage.setItem('name', firstNameField.value);
     localStorage.setItem('lastName', surNameField.value);
     localStorage.setItem('dni', dniField.value);
-    localStorage.setItem('dob', toDMY(birthDateField.value));
+    localStorage.setItem('dob', birthDateField.value);
     localStorage.setItem('phone', phoneField.value);
-    localStorage.setItem('address', adressField.value);
+    localStorage.setItem('address', addressField.value);
     localStorage.setItem('city', locationField.value);
     localStorage.setItem('zip', postalField.value);
     localStorage.setItem('email', emailField.value);
@@ -604,29 +597,40 @@ function retrieveLocal()
     firstNameField.value = localStorage.getItem('name');
     surNameField.value = localStorage.getItem('lastName');
     dniField.value = localStorage.getItem('dni');
-    birthDateField.value = toMDY(localStorage('dob'))
+    birthDateField.value = localStorage.getItem('dob');
     phoneField.value = localStorage.getItem('phone');
-    adressField.value = localStorage.getItem('address');
+    addressField.value = localStorage.getItem('address');
     locationField.value = localStorage.getItem('city');
     postalField.value = localStorage.getItem('zip');
     emailField.value = localStorage.getItem('email');
     passwordField.value = localStorage.getItem('password');
     passwordConfirmField.value = localStorage.getItem('password');
 }
-window.onload()
+window.addEventListener('load', function()
 {
     retrieveLocal();
-}
+    verifyName(firstNameField);
+    verifySurName(surNameField);
+    verifyDNI(dniField);
+    verifyDate(birthDateField);
+    verifyPhone(phoneField);
+    verifyAddress(addressField);
+    verifyLocation(locationField);
+    verifyPostal(postalField);
+    verifyMail(emailField);
+    verifyPassword(passwordField);
+    verifyPasswordConfirmed(passwordConfirmField, passwordField);
+})
 
 const fieldSection = document.querySelector(".form-section.flex-container");
 
 function requestInfo(nameToSend, surNameToSend, dniToSend, dateToSend, 
-    phoneToSend, emailToSend, adressToSend, locationToSend, zipToSend, 
+    phoneToSend, emailToSend, addressToSend, locationToSend, zipToSend, 
     passwordToSend)
 {
     fetch(signuSitepUrl.concat('?','name=', nameToSend, '&lastName=', surNameToSend,
     '&dni=', dniToSend, '&dob=', dateToSend, '&phone=', phoneToSend, 
-    '&adress=', adressToSend, '&city=', locationToSend, '&zip=', zipToSend, 
+    '&address=', addressToSend, '&city=', locationToSend, '&zip=', zipToSend, 
     '&email=', emailToSend, '&password=', passwordToSend))
         .then(function (Response)
         {
@@ -644,43 +648,33 @@ function requestInfo(nameToSend, surNameToSend, dniToSend, dateToSend,
         })
         .then(function (jsonResponse)
         {
-            if(jsonResponse.ok)
-            {
-                console.log(jsonResponse);
-            }
+            var responseDisplay = document.createElement('p');
+            responseDisplay.classList.add('descriptor');
+            var responseMsg = document.createTextNode(jsonResponse.msg + '!');
+            responseDisplay.appendChild(responseMsg);
+            resultSection.appendChild(responseDisplay);
         })
 }
-
-var nameRight = false;
-var surNameRight = false;
-var dniRight = false;
-var birthRight = false;
-var phoneRight = false;
-var mailRight = false;
-var adressRight = false;
-var locationRight
-var postalRight = false;
-var passwordRight = false;
-var passwordConfirmRight = false;
 
 function displayResults()
 {
     requestInfo(firstNameField.value, surNameField.value, dniField.value, 
-        toMDY(birthDateField.value), phoneField.value, adressField.value, 
+        toMDY(birthDateField), phoneField.value, emailField.value, addressField.value, 
         locationField.value, postalField.value, passwordField.value)
     if(!nameRight || !surNameRight || !dniRight || !birthRight || !phoneRight || !mailRight || 
-        !adressRight || !locationRight || !postalRight || !passwordRight || !passwordConfirmRight)
+        !addressRight || !locationRight || !postalRight || !passwordRight || !passwordConfirmRight)
     {
-        window.alert('Complete the fields properly. \nOne or more fields are incorrect or empty');
+         window.alert('Complete the fields properly. \nOne or more fields are incorrect or empty');
     }
     else
     {
         fieldSection.insertAdjacentElement("afterend", resultSection);
+        appendResults();
         resultSection.style.visibility = "visible";
     }
 }
 
-var submitButton = document.querySelector("#submit");
+const submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", function()
 {
     displayResults()

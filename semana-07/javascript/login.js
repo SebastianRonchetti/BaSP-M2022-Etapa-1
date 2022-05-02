@@ -199,7 +199,6 @@ function requestInfo(emailToSend, passwordToSend)
         })
 }
 
-
 function onLogInClick()
 {
     requestInfo(eMailField.value, passwordField.value);
