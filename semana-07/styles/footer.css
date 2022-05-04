@@ -53,7 +53,7 @@ footer section.flex-container{
     footer{
         justify-content: space-around;
         gap: 10px;
-        margin: 10px 0px 0px 30px;
+        margin: 10% 0px 0px 20%;
     }
 
     footer.flex-container section.flex-container{

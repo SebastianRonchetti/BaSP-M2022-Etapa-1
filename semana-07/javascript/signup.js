@@ -606,6 +606,7 @@ function retrieveLocal()
     passwordField.value = localStorage.getItem('password');
     passwordConfirmField.value = localStorage.getItem('password');
 }
+
 window.addEventListener('load', function()
 {
     retrieveLocal();
@@ -628,16 +629,15 @@ function requestInfo(nameToSend, surNameToSend, dniToSend, dateToSend,
     phoneToSend, emailToSend, addressToSend, locationToSend, zipToSend, 
     passwordToSend)
 {
-    fetch(signuSitepUrl.concat('?','name=', nameToSend, '&lastName=', surNameToSend,
-    '&dni=', dniToSend, '&dob=', dateToSend, '&phone=', phoneToSend, 
-    '&address=', addressToSend, '&city=', locationToSend, '&zip=', zipToSend, 
-    '&email=', emailToSend, '&password=', passwordToSend))
+    fetch(signuSitepUrl.concat("?","name=", nameToSend, "&lastName=", surNameToSend,
+    "&dni=", dniToSend, "&dob=", dateToSend, "&phone=", phoneToSend, 
+    "&address=", addressToSend, "&city=", locationToSend, "&zip=", zipToSend, 
+    "&email=", emailToSend, "&password=", passwordToSend))
         .then(function (Response)
         {
             if(Response.ok)
             {
                 console.log('Response: ');
-                saveOnLocal();
                 return Response.json();
             }
             else
@@ -648,11 +648,29 @@ function requestInfo(nameToSend, surNameToSend, dniToSend, dateToSend,
         })
         .then(function (jsonResponse)
         {
-            var responseDisplay = document.createElement('p');
-            responseDisplay.classList.add('descriptor');
-            var responseMsg = document.createTextNode(jsonResponse.msg + '!');
-            responseDisplay.appendChild(responseMsg);
-            resultSection.appendChild(responseDisplay);
+            if(jsonResponse.success)
+            {                
+                saveOnLocal();
+                var responseDisplay = document.createElement('p');
+                responseDisplay.classList.add('descriptor');
+                var responseMsg = document.createTextNode(jsonResponse.msg + '!');
+                if(responseDisplay.hasChildNodes == true)
+                {
+                    resultSection.removeChild(responseDisplay);
+                }
+                responseDisplay.appendChild(responseMsg);
+                resultSection.appendChild(responseDisplay);
+            }
+            else
+            {
+                var alertText = '';
+                for(let i = 0; i < jsonResponse.errors.length; i++)
+                {
+                    alertText.concat(jsonResponse.errors[i] + ' \n');
+                }
+
+                window.alert(alertText);
+            }
         })
 }
 
